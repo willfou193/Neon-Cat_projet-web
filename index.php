@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Salut!</p>
+    <div><p>Salut!</p></div>
+   
 </body>
 </html>
