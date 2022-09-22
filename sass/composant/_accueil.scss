@@ -1,3 +1,4 @@
+// Regroupe le SCSS de la page d'accueil
 main{
     display: flex;
 }
@@ -6,6 +7,7 @@ main{
     height: 100vh;
     background-color: black;
     & p{
+        text-align: center;
         color: white;
     }
 }
@@ -13,4 +15,10 @@ main{
     width: 20%;
     height: 100vh;
     background-color: white;
+    & p{
+        text-align: center;
+    }
+}
+body{
+    background-color: lightblue;
 }

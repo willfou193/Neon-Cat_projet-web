@@ -1,0 +1,19 @@
+// Regroupe le SCSS des menus de navigation
+.menu-principal{
+
+    & h2{
+        text-align: center;
+    }
+
+    .menu-principal__nav{ //HTML dans index.php
+        display: flex;
+        flex-direction: column;
+        margin-top: 50vh;
+        & a{
+            margin-top: 1em;
+            text-decoration: none;
+            font-size: 2em;
+            text-align: center;
+        }
+    }
+}

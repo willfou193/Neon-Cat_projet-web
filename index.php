@@ -19,7 +19,14 @@
         <p>Page d'accueil</p>
     </section>
     <section class="menu-principal">
-        <p>Menu side</p>
+        <h2 id="menu-principal__titre">Menu side</h2>
+        
+        <div class="menu-principal__nav">
+           <a class="nav__lien" href="">Cours</a> 
+           <a class="nav__lien" href="">Professeurs</a>
+           <a class="nav__lien" href="">Vie Communautaire</a>
+           <a class="nav__lien" href="">Autre?</a>
+        </div>
     </section>
 
     <?php

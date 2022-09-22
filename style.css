@@ -341,8 +341,21 @@ html {
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
-body {
-  background-color: #abec93;
+.menu-principal h2 {
+  text-align: center;
+}
+
+.menu-principal .menu-principal__nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50vh;
+}
+
+.menu-principal .menu-principal__nav a {
+  margin-top: 1em;
+  text-decoration: none;
+  font-size: 2em;
+  text-align: center;
 }
 
 main {
@@ -356,6 +369,7 @@ main {
 }
 
 .accueil p {
+  text-align: center;
   color: white;
 }
 
@@ -363,6 +377,14 @@ main {
   width: 20%;
   height: 100vh;
   background-color: white;
+}
+
+.menu-principal p {
+  text-align: center;
+}
+
+body {
+  background-color: lightblue;
 }
 
 /* ---------------------------------------------------------
