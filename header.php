@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
+<!--<div id="page" class="site">
 	<header id="masthead" class="site-header">
 		<p>Page d'accueil</p>
-	</header><!-- #masthead -->
+	</header> -->

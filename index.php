@@ -13,20 +13,25 @@
  * @package underscore
  */
 ?>
-
 <?php get_header(); ?>
+<main>
+    <section class="accueil">
+        <p>Page d'accueil</p>
+    </section>
+    <section class="menu-principal">
+        <p>Menu side</p>
+    </section>
 
-    <main>
     <?php
-		if ( have_posts() ) :
+        if ( have_posts() ) :
             while ( have_posts() ) :
-				the_post(); 
+                the_post(); 
                 //the_title('<h2>','</h2>');
                 //the_content(null, true);
             endwhile;
         endif;
     ?>    
-    </main>    
+</main>    
 <?php get_footer(); ?>
 </html>
 
