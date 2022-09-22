@@ -28,7 +28,10 @@ INITIALISATION
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
-@import "composant/test";
+
+@import "composant/accueil";
+@import "composant/navigation";
+@import "composant/carrousel";
 /* ---------------------------------------------------------
 LAYOUT
 --------------------------------------------------------- */
