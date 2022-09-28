@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<main id="main__cours">
-    <p>Page de cours</p>
-    <div id="contenant carrousel-cours-contenant"><!-- Debut carrousel -->
+<main id="main__prof">
+    <p>Page des profs</p>
+    <div id="contenant carrousel-prof-contenant"><!-- Debut carrousel -->
         <input type="radio" name="position" checked />
         <input type="radio" name="position" />
         <input type="radio" name="position" />
@@ -10,7 +10,7 @@
         <input type="radio" name="position" />
         <input type="radio" name="position" />
         <!-- Ajout d'une input -->
-        <div id="carousel carrousel-cours">
+        <div id="carousel carrousel-prof">
             <div class="item"></div>
             <div class="item"></div>
             <div class="item"></div>
