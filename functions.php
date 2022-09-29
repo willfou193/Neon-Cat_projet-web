@@ -62,5 +62,34 @@ function underscore_scripts() {
 	
 }
 add_action( 'wp_enqueue_scripts', 'underscore_scripts' );
+// -------------------------------------------------------------------Enregistrement
+add_action( 'widgets_init', 'my_register_sidebars' );
+function my_register_sidebars() {
+    /* Register the 'primary' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'menu-burger',
+            'name'          => __( 'burger' ),
+            'description'   => __( 'Premier test de menu fonctionnel' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+    /* Repeat register_sidebar() code for additional sidebars. */
+}/**
+ * @param : WP_Query $query
+ * $query contitent la requete mysql qui permet d'extraire le contenu de la novuelle page
+ * que l'on tente d'accèder
+ */
 
+function wpb_custom_new_menu() {
+	register_nav_menus(
+	  array(
+		'menu_burger' => __( 'Menu burger' ),
 
+	  )
+	);
+  }
+  add_action( 'init', 'wpb_custom_new_menu' );

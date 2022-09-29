@@ -13,6 +13,16 @@
 
 	<footer>
         <p>Footer</p>
+		<div class="carrousel-test">
+            <?= get_sidebar("burger") ?>
+        </div>
+		<?php 
+		wp_nav_menu(
+			array(
+				"menu" => "menu_burger"
+			)
+		);
+		?>
 	</footer><!-- #colophon -->
 <!--</div> #page -->
 
