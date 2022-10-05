@@ -63,7 +63,6 @@ function underscore_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'underscore_scripts' );
 // -------------------------------------------------------------------Enregistrement
-add_action( 'widgets_init', 'my_register_sidebars' );
 function my_register_sidebars() {
     /* Register the 'primary' sidebar. */
     register_sidebar(
@@ -78,7 +77,9 @@ function my_register_sidebars() {
         )
     );
     /* Repeat register_sidebar() code for additional sidebars. */
-}/**
+}
+add_action( 'widgets_init', 'my_register_sidebars' );
+/**
  * @param : WP_Query $query
  * $query contitent la requete mysql qui permet d'extraire le contenu de la novuelle page
  * que l'on tente d'accèder
