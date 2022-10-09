@@ -14,11 +14,13 @@
 	<footer>
 		<div id="contenant__footer">
 			<p>info</p>
-			<div class="footer__bulle">1</div>
-			<div class="footer__bulle">2</div>
-			<div class="footer__bulle">3</div>
-			<div class="footer__bulle">4</div>
-			<div class="footer__bulle">5</div>
+			<div id="contenant__bulles">
+				<div class="footer__bulle">1</div>
+				<div class="footer__bulle">2</div>
+				<div class="footer__bulle">3</div>
+				<div class="footer__bulle">4</div>
+				<div class="footer__bulle">5</div>
+			</div>
 		</div>
 		<!-- ?php 
 		wp_nav_menu(

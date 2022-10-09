@@ -7,23 +7,11 @@ License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: cidw-5w5
 */
-/* ---------------------------------------------------------
-VARIABLES
---------------------------------------------------------- */
-@import "variables/couleurs";
-@import "variables/polices";
-@import "variables/structure";
 
 /* ---------------------------------------------------------
-INITIALISATION
+ANIMATION
 --------------------------------------------------------- */
-@import "initialisation/normalize";
-@import "initialisation/box-sizing";
-
-/* ---------------------------------------------------------
-ÉLÉMENTS
---------------------------------------------------------- */
-@import "element/balise";
+@import "Animation/bulles";
 
 /* ---------------------------------------------------------
 COMPOSANTES
@@ -33,10 +21,29 @@ COMPOSANTES
 @import "composant/navigation";
 @import "composant/carrousel";
 @import "composant/footer";
-/* ---------------------------------------------------------
-LAYOUT
---------------------------------------------------------- */
+
 
 /* ---------------------------------------------------------
-ANIMATION
+ÉLÉMENTS
 --------------------------------------------------------- */
+@import "element/balise";
+
+
+/* ---------------------------------------------------------
+INITIALISATION
+--------------------------------------------------------- */
+@import "initialisation/normalize";
+@import "initialisation/box-sizing";
+
+
+/* ---------------------------------------------------------
+VARIABLES
+--------------------------------------------------------- */
+@import "variables/couleurs";
+@import "variables/mixins";
+@import "variables/polices";
+@import "variables/structure";
+
+
+
+
