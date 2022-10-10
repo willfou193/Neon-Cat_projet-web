@@ -22,7 +22,7 @@
                 <p>burger</p>
             </div>
         </div>
-        <div class="contenant "><!-- Debut carrousel -->
+        <div class="contenant ">
             <input type="radio" name="position" checked />
             <input type="radio" name="position" />
             <input type="radio" name="position" />
@@ -30,8 +30,7 @@
             <input type="radio" name="position" />
             <input type="radio" name="position" />
             <input type="radio" name="position" />
-                
-            <!-- Ajout d'une input -->
+    
             <div class="carousel">
                 <div class="item"></div>
                 <div class="item"></div>
@@ -40,10 +39,10 @@
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
-                <!-- Ajout d'une div -->
             <div>
         </div>
     </section>
+
    <!-- <section class="menu-principal">
         <h2 id="menu-principal__titre">Menu side</h2>
         

@@ -9,6 +9,14 @@ Text Domain: cidw-5w5
 */
 
 /* ---------------------------------------------------------
+VARIABLES
+--------------------------------------------------------- */
+@import "variables/mixins";
+@import "variables/couleurs";
+@import "variables/polices";
+@import "variables/structure";
+
+/* ---------------------------------------------------------
 ANIMATION
 --------------------------------------------------------- */
 @import "Animation/bulles";
@@ -36,13 +44,6 @@ INITIALISATION
 @import "initialisation/box-sizing";
 
 
-/* ---------------------------------------------------------
-VARIABLES
---------------------------------------------------------- */
-@import "variables/couleurs";
-@import "variables/mixins";
-@import "variables/polices";
-@import "variables/structure";
 
 
 

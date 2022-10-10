@@ -9,6 +9,9 @@ License URI: LICENSE
 Text Domain: cidw-5w5
 */
 /* ---------------------------------------------------------
+VARIABLES
+--------------------------------------------------------- */
+/* ---------------------------------------------------------
 ANIMATION
 --------------------------------------------------------- */
 @keyframes bulle1 {
@@ -74,12 +77,14 @@ main {
 }
 
 .accueil {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: black;
 }
 
 .accueil p {
+  margin: 0;
+  padding: 20px 0;
   text-align: center;
   color: white;
 }
@@ -95,7 +100,7 @@ main {
 }
 
 body {
-  background-color: lightblue;
+  background-color: black;
 }
 
 .menu-burger {
@@ -285,6 +290,28 @@ input:nth-of-type(7):checked ~ div.carousel {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 767px) {
+  #contenant__footer {
+    left: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    font-size: 1em;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #contenant__bulles {
+    position: fixed;
+    display: flex;
+    width: 90%;
+    margin-left: 10%;
+    bottom: 30px;
+    justify-content: space-around;
+  }
+}
+
 .footer__bulle {
   position: absolute;
   width: 50px;
@@ -294,6 +321,14 @@ input:nth-of-type(7):checked ~ div.carousel {
   color: white;
   text-align: center;
   display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer__bulle {
+    width: 40px;
+    height: 40px;
+    position: initial;
+  }
 }
 
 .footer__bulle:nth-child(1) {
@@ -659,8 +694,4 @@ template {
 html {
   box-sizing: border-box;
 }
-
-/* ---------------------------------------------------------
-VARIABLES
---------------------------------------------------------- */
 /*# sourceMappingURL=style.css.map */

@@ -9,6 +9,24 @@
     text-align: center;
     font-size: 2em;
     cursor: pointer;
+    @include screen('mobile')  {
+        left: 20px;
+        bottom: 20px;
+        width: 60px;
+        height: 60px;
+        font-size: 1em;
+        flex-direction: row;
+    }
+}
+#contenant__bulles{
+    @include screen('mobile')  {
+        position: fixed;
+        display: flex;
+        width: 90%;
+        margin-left: 10%;
+        bottom: 30px;
+        justify-content: space-around;
+    }
 }
 .footer__bulle{
     position: absolute;
@@ -19,6 +37,11 @@
     color: white;
     text-align: center;
     display: none;
+    @include screen('mobile')  {
+        width: 40px;
+        height: 40px;
+        position: initial;
+    }
 }
 
 //milieu est 35 / 35
@@ -29,18 +52,22 @@
 .footer__bulle:nth-child(2){
     bottom: 240px;
     left: 120px;
+   
 }
 .footer__bulle:nth-child(3){
     bottom: 190px;
     left: 190px;
+   
 }
 .footer__bulle:nth-child(4){
     bottom: 120px;
     left: 240px;
+    
 }
 .footer__bulle:nth-child(5){
     bottom: 35px;
     left: 265px;
+   
 }
 
 
