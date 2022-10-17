@@ -17,11 +17,6 @@
 <main>
     <section class="accueil">
         <p>Page d'accueil</p>
-        <div class="menu-burger">
-            <div class="burger__contenant">
-                <p>burger</p>
-            </div>
-        </div>
         <div class="contenant ">
             <input type="radio" name="position" checked />
             <input type="radio" name="position" />
