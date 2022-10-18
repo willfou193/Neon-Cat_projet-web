@@ -24,7 +24,10 @@
 	<header>
 		<div class="logo"></div>
 		<div class="menu-burger">
-			<div class="burger__contenant">
+			<div id="burger__fondActif">
+				
+			</div>
+			<div id="burger__contenant">
 				<div class="burger__ligne"></div>
 				<div class="burger__ligne"></div>
 				<div class="burger__ligne"></div>

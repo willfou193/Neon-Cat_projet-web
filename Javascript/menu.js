@@ -21,3 +21,20 @@ function activerDesactiverMenu(){
         console.log("j'active");
     }
 }
+//Script du menu burger dans le header
+var menuBg= document.getElementById("burger__contenant");
+var menuBgBackground= document.getElementById("burger__fondActif");
+let activerMenuBg = false;
+
+menuBg.addEventListener("click", activerDesactiverMenuBg)
+function activerDesactiverMenuBg(){
+    if(activerMenuBg == true){
+        activerMenuBg = false;
+        menuBgBackground.style.display = 'none';
+        console.log("je desactive");
+    } else {
+        activerMenuBg = true;
+        menuBgBackground.style.display = 'block';
+        console.log("j'active");
+    }
+}

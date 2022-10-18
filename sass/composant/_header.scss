@@ -1,16 +1,30 @@
 .menu-burger{
     height: 10%;
-    & .burger__contenant{
+    & #burger__contenant{
         width: 60px;
         height: 60px;
-        background-color: white;
-        margin-left: auto;
-        margin: 0 auto;
+        margin: 20px auto 0 auto;
+        cursor: pointer;
         .burger__ligne{
             width: 100%;
-            height: 8px;
-            background-color: red;
-            margin: 6px 0px;
+            height: 6px;
+            background-color: white;
+            margin: 8px 0px;
         }
+    }
+    & #burger__fondActif{
+        display: none;
+        z-index: 100;
+        background-color: white;
+        position: fixed;
+
+        width: 30%;
+        height: 50%;
+
+        top: 50%;
+        right: 50%;
+
+        margin-top: -25%;
+        margin-right: -15%;
     }
 }

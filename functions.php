@@ -54,12 +54,17 @@ function underscore_scripts() {
 					 array(), 
 					 filemtime(get_template_directory() . '/style.css'), false);
 	wp_enqueue_script('underscore_scripts',
-					get_template_directory_uri() . '/Javascript/menu_info.js',
+					get_template_directory_uri() . '/Javascript/menu.js',
 					array(), 
-					filemtime(get_template_directory() . '/Javascript/menu_info.js'), 
+					filemtime(get_template_directory() . '/Javascript/menu.js'), 
 					true); //true pour intégrer le JS en bas du document
 }
 add_action( 'wp_enqueue_scripts', 'underscore_scripts' );
+
+function otherJs_enqueue_custom_js() {
+    wp_enqueue_script('custom', get_stylesheet_directory_uri().'/Javascript/menu_burger.js');
+}
+add_action('wp_enqueue_scripts', 'otherJs_enqueue_custom_js');
 // -------------------------------------------------------------------Enregistrement
 function my_register_sidebars() {
     /* Register the 'primary' sidebar. */
