@@ -1,19 +1,22 @@
 #contenant__footer{
+    background-image: url('media/images/menuInfo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
     position: fixed;
-    border-radius: 60px;
-    width: 120px;
-    height: 120px;
+    background-color: black;
+    width: 160px;
+    height: 160px;
     bottom: 50px;
     left: 50px;
-    background-color: red;
     text-align: center;
     font-size: 2em;
     cursor: pointer;
     @include screen('mobile')  {
         left: 20px;
         bottom: 20px;
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         font-size: 1em;
         flex-direction: row;
     }

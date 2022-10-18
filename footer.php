@@ -13,7 +13,6 @@
 
 	<footer>
 		<div id="contenant__footer">
-			<p>info</p>
 			<div id="contenant__bulles">
 				<div class="footer__bulle">1</div>
 				<div class="footer__bulle">2</div>
