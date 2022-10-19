@@ -1,0 +1,51 @@
+//Animatinos des bulles du menu info
+@keyframes bulle1 {
+    from {
+        bottom: 35px;
+        left: 35px;
+    }
+    to{
+        bottom: 265px;
+        left: 35px;
+    }
+}
+@keyframes bulle2 {
+    from {
+        bottom: 35px;
+        left: 35px;
+    }
+    to{
+        bottom: 240px;
+    left: 120px;
+    }
+}
+@keyframes bulle3 {
+    from {
+        bottom: 35px;
+        left: 35px;
+    }
+    to{
+        bottom: 265px;
+        left: 35px;
+    }
+}
+@keyframes bulle4 {
+    from {
+        bottom: 35px;
+        left: 35px;
+    }
+    to{
+        bottom: 120px;
+        left: 240px;
+    }
+}
+@keyframes bulle5 {
+    from {
+        bottom: 35px;
+        left: 35px;
+    }
+    to{
+        bottom: 35px;
+        left: 265px;
+    }
+}

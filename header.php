@@ -21,6 +21,26 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<header>
+		<div class="logo"></div>
+		<div class="menu-burger">
+			<div id="burger__fondActif">
+				<?php 
+					wp_nav_menu(
+						array(
+							"menu" => "menu_burger"
+						)
+				);
+				?>
+			</div>
+			<div id="burger__contenant">
+				<div class="burger__ligne"></div>
+				<div class="burger__ligne"></div>
+				<div class="burger__ligne"></div>
+			</div>
+		</div>
+		<div class="menu-burger__ouvert"></div>
+	</header>
 <?php wp_body_open(); ?>
 <!--<div id="page" class="site">
 	<header id="masthead" class="site-header">

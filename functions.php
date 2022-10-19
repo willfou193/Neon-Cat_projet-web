@@ -48,22 +48,24 @@ add_action( 'after_setup_theme', 'underscore_setup' );
  * Enqueue scripts and styles.
  */
 function underscore_scripts() {
-	/*
-	wp_enqueue_style( 'underscore-style',
-					   get_stylesheet_uri(), 
-					   array(),
-					_S_VERSION );
-	*/				
-
+		
 	wp_enqueue_style('underscore-style',
 					 get_template_directory_uri() . '/style.css',
 					 array(), 
 					 filemtime(get_template_directory() . '/style.css'), false);
-	
+	wp_enqueue_script('underscore_scripts',
+					get_template_directory_uri() . '/Javascript/menu.js',
+					array(), 
+					filemtime(get_template_directory() . '/Javascript/menu.js'), 
+					true); //true pour intégrer le JS en bas du document
 }
 add_action( 'wp_enqueue_scripts', 'underscore_scripts' );
+
+function otherJs_enqueue_custom_js() {
+    wp_enqueue_script('custom', get_stylesheet_directory_uri().'/Javascript/menu_burger.js');
+}
+add_action('wp_enqueue_scripts', 'otherJs_enqueue_custom_js');
 // -------------------------------------------------------------------Enregistrement
-add_action( 'widgets_init', 'my_register_sidebars' );
 function my_register_sidebars() {
     /* Register the 'primary' sidebar. */
     register_sidebar(
@@ -78,7 +80,9 @@ function my_register_sidebars() {
         )
     );
     /* Repeat register_sidebar() code for additional sidebars. */
-}/**
+}
+add_action( 'widgets_init', 'my_register_sidebars' );
+/**
  * @param : WP_Query $query
  * $query contitent la requete mysql qui permet d'extraire le contenu de la novuelle page
  * que l'on tente d'accèder
