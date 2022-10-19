@@ -25,7 +25,13 @@
 		<div class="logo"></div>
 		<div class="menu-burger">
 			<div id="burger__fondActif">
-				
+				<?php 
+					wp_nav_menu(
+						array(
+							"menu" => "menu_burger"
+						)
+				);
+				?>
 			</div>
 			<div id="burger__contenant">
 				<div class="burger__ligne"></div>

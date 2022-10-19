@@ -17,7 +17,7 @@
 <main>
     <section class="accueil">
         <p>Page d'accueil</p>
-        <div class="contenant ">
+        <!--<div class="contenant ">
             <input type="radio" name="position" checked />
             <input type="radio" name="position" />
             <input type="radio" name="position" />
@@ -35,7 +35,7 @@
                 <div class="item"></div>
                 <div class="item"></div>
             <div>
-        </div>
+        </div>-->
     </section>
 
    <!-- <section class="menu-principal">
