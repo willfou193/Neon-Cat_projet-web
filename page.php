@@ -18,42 +18,55 @@ get_header();
            $current_slug = add_query_arg( array(), $wp->request );
         ?>
             <?php if($current_slug == 'les-profs'): ?>
-                <div class="contenant ">
-                    <input type="radio" name="position" checked />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
-                    <input type="radio" name="position" />
+                <div class="contenant prof">
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" checked/>
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
             
                     <div class="carousel">
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                    <div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                        <div class="item prof"></div>
+                    </div>
+                    <div id="bouton__droit"></div>
+                    <div id="bouton__gauche"></div>
+                   
+                    
                 </div>
             <?php endif; ?>
                 
      
     <?php endif; ?>
+    <?php
+        if ( have_posts() ) :
+            while ( have_posts() ) :
+                the_post(); 
+                //the_title('<h2>','</h2>');
+                //the_content(null, true);
+            endwhile;
+        endif;
+    ?>    
 </main>
 <?php get_footer(); ?>

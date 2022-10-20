@@ -60,11 +60,6 @@ function underscore_scripts() {
 					true); //true pour intégrer le JS en bas du document
 }
 add_action( 'wp_enqueue_scripts', 'underscore_scripts' );
-
-function otherJs_enqueue_custom_js() {
-    wp_enqueue_script('custom', get_stylesheet_directory_uri().'/Javascript/menu_burger.js');
-}
-add_action('wp_enqueue_scripts', 'otherJs_enqueue_custom_js');
 // -------------------------------------------------------------------Enregistrement
 function my_register_sidebars() {
     /* Register the 'primary' sidebar. */
