@@ -1,11 +1,26 @@
 // Regroupement des couleurs du site
 
 // -------------------- Background-color --------------------
-$couleur__background-body : rgb(0, 0, 0);
+//$couleur__background-body : rgb(0, 0, 0);
 $couleur__background-principale : rgb(0, 229, 255);
 $couleur__background-secondaire : rgb(227, 147, 236);
 
 
 // -------------------- Fonts --------------------
-$couleur__font-titre: #ff0000;
 $couleur__font-categorie: #ff9900;
+
+
+// -------------------- Les couleurs officel des maquettes --------------------
+// -------------------- Background-color --------------------
+$couleur__background-body : #1A1A1A;
+$couleur__background-menu : #000000;
+$couleur__background-sous-titre: #C8C8C8;
+
+// -------------------- Fonts --------------------
+$couleur__font-titre: #FFFBF6;
+$couleur__font-sous-titre: #CFCFCF;
+$couleur__font-cours: #9BE085;
+
+// -------------------- autre --------------------
+$couleur__font-autre1: #73CD8E;
+$couleur__font-autre2: #4780C6;
