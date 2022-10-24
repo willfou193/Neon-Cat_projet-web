@@ -17,47 +17,10 @@
 <main>
     <section class="accueil">
         <p>Page d'accueil</p>
-        <!--<div class="contenant ">
-            <input type="radio" name="position" checked />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-            <input type="radio" name="position" />
-    
-            <div class="carousel">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            <div>
-        </div>-->
-    </section>
-
-   <!-- <section class="menu-principal">
-        <h2 id="menu-principal__titre">Menu side</h2>
         
-        <div class="menu-principal__nav">
-           <a class="nav__lien" href="#">Cours</a> 
-           <a class="nav__lien" href="#">Professeurs</a>
-           <a class="nav__lien" href="#">Vie Communautaire</a>
-           <a class="nav__lien" href="#">Autre?</a>
-        </div>
-    </section> -->
+    </section>
+    <iframe width="1024" height="576" src="https://www.youtube.com/embed/WGvBFuDdNzE?&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
-    <?php
-        if ( have_posts() ) :
-            while ( have_posts() ) :
-                the_post(); 
-                //the_title('<h2>','</h2>');
-                //the_content(null, true);
-            endwhile;
-        endif;
-    ?>    
 </main>    
 <?php get_footer(); ?>
 </html>

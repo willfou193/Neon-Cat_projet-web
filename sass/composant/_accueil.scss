@@ -4,7 +4,7 @@ main{
 }
 .accueil{
     width: 100%;
-    background-color: black;
+    background-color: $couleur__background-body;
     & p{
         margin: 0;
         padding: 20px 0;
@@ -20,5 +20,5 @@ main{
     }
 }
 body{
-    background-color:black;
+    background-color:$couleur__background-body;
 }

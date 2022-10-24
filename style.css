@@ -196,14 +196,14 @@ body {
   margin: 0;
   display: grid;
   grid-template-rows: 500px 100px;
-  grid-template-columns: 1fr 30px 30px 30px 30px 30px 30px 30px 1fr;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 1fr;
   align-items: center;
   justify-items: center;
 }
 
 div.carousel {
   grid-row: 1 / 2;
-  grid-column: 1 / 10;
+  grid-column: 1 / 17;
   width: 100vw;
   height: 500px;
   display: flex;
@@ -212,8 +212,8 @@ div.carousel {
   overflow: hidden;
   transform-style: preserve-3d;
   perspective: 600px;
-  --items: 5;
-  --middle: 3;
+  --items: 14;
+  --middle: 6;
   --position: 1;
   pointer-events: none;
 }
@@ -226,8 +226,28 @@ div.item {
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 0.25s linear;
-  transform: rotateY(calc(-8deg * var(--r))) translateX(calc(-350px * var(--r)));
+  transform: translateX(calc(-35vw * var(--r)));
   z-index: calc((var(--position) - var(--abs)));
+}
+
+#bouton__droit {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#bouton__gauche {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
 }
 
 div.item:nth-of-type(1) {
@@ -265,6 +285,41 @@ div.item:nth-of-type(6) {
 
 div.item:nth-of-type(7) {
   --offset: 7;
+  background-color: #ce9e3d;
+}
+
+div.item:nth-of-type(8) {
+  --offset: 8;
+  background-color: #ce9e3d;
+}
+
+div.item:nth-of-type(9) {
+  --offset: 9;
+  background-color: #ce9e3d;
+}
+
+div.item:nth-of-type(10) {
+  --offset: 10;
+  background-color: #ce9e3d;
+}
+
+div.item:nth-of-type(11) {
+  --offset: 11;
+  background-color: #ce9e3d;
+}
+
+div.item:nth-of-type(12) {
+  --offset: 12;
+  background-color: #ce9e3d;
+}
+
+div.item:nth-of-type(13) {
+  --offset: 13;
+  background-color: #ce9e3d;
+}
+
+div.item:nth-of-type(14) {
+  --offset: 14;
   background-color: #ce9e3d;
 }
 
@@ -331,13 +386,76 @@ input:nth-of-type(7):checked ~ div.carousel {
   --position: 7;
 }
 
+input:nth-of-type(8) {
+  grid-column: 9 / 10;
+  grid-row: 2 / 3;
+}
+
+input:nth-of-type(8):checked ~ div.carousel {
+  --position: 8;
+}
+
+input:nth-of-type(9) {
+  grid-column: 10 / 11;
+  grid-row: 2 / 3;
+}
+
+input:nth-of-type(9):checked ~ div.carousel {
+  --position: 9;
+}
+
+input:nth-of-type(10) {
+  grid-column: 11 / 12;
+  grid-row: 2 / 3;
+}
+
+input:nth-of-type(10):checked ~ div.carousel {
+  --position: 10;
+}
+
+input:nth-of-type(11) {
+  grid-column: 12 / 13;
+  grid-row: 2 / 3;
+}
+
+input:nth-of-type(11):checked ~ div.carousel {
+  --position: 11;
+}
+
+input:nth-of-type(12) {
+  grid-column: 13 / 14;
+  grid-row: 2 / 3;
+}
+
+input:nth-of-type(12):checked ~ div.carousel {
+  --position: 12;
+}
+
+input:nth-of-type(13) {
+  grid-column: 14 / 15;
+  grid-row: 2 / 3;
+}
+
+input:nth-of-type(13):checked ~ div.carousel {
+  --position: 13;
+}
+
+input:nth-of-type(14) {
+  grid-column: 15 / 16;
+  grid-row: 2 / 3;
+}
+
+input:nth-of-type(14):checked ~ div.carousel {
+  --position: 14;
+}
+
 #contenant__footer {
   background-image: url("media/images/menuInfo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   position: fixed;
-  background-color: black;
+  background-color: none;
   width: 160px;
   height: 160px;
   bottom: 50px;
@@ -416,6 +534,27 @@ input:nth-of-type(7):checked ~ div.carousel {
 /* ---------------------------------------------------------
 ÉLÉMENTS
 --------------------------------------------------------- */
+h1 {
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+h4 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
 a {
   text-decoration: none;
 }
