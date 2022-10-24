@@ -56,6 +56,30 @@ get_header();
                     
                 </div>
             <?php endif; ?>
+
+            <?php if($current_slug == 'les-cours'): ?>
+                <div class="contenant prof">
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" checked/>
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" />
+            
+                    <div class="carousel">
+                        <div class="item cours"></div>
+                        <div class="item cours"></div>
+                        <div class="item cours"></div>
+                        <div class="item cours"></div>
+                        <div class="item cours"></div>
+                        <div class="item cours"></div>
+                    </div>
+                    <div id="bouton__droit"></div>
+                    <div id="bouton__gauche"></div>
+                   
+                    
+                </div>
+            <?php endif; ?>
                 
      
     <?php endif; ?>
