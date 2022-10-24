@@ -13,7 +13,7 @@
  * @package underscore
  */
 ?>
-
+<?php get_header(); ?>
 <main>
     <section class="accueil">
         <p>Page d'accueil</p>
