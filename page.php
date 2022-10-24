@@ -38,7 +38,11 @@ get_header();
                         <div class="item prof"></div>
                         <div class="item prof"></div>
                         <div class="item prof"></div>
-                        <div class="item prof"></div>
+                        <div class="item prof">
+                            <span id="test"></span>
+                            <div class="nomProf"><p>Martin</p><br><p>St-Pierre</p></div>
+                            <div class="description"><p>Prof de jeu</p></div>
+                        </div>
                         <div class="item prof"></div>
                         <div class="item prof"></div>
                         <div class="item prof"></div>

@@ -18,19 +18,15 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 600px;
     --items: 14;
     --middle: 6;
     --position: 1;
-    pointer-events: none;
   }
   
   div.item {
     position: absolute;
-    width: 300px;
-    height: 400px;
-    background-color: coral;
+    width: 420px;
+    height: 420px;
     --r: calc(var(--position) - var(--offset)); //1 - la position des carte
     --abs: max(calc(var(--r) * -1), var(--r)); // 0 ou -1 ou -2... donc 0 1 ou 2
     transition: all 0.25s linear;
@@ -61,7 +57,7 @@
 
 
 
-  // les cartes
+  // les cartes de chacun des profs
   div.item:nth-of-type(1) {
     --offset: 1;
     background-color: #90f1ef;
@@ -78,10 +74,15 @@
   }
   div.item:nth-of-type(4) {
     --offset: 4;
-    background-color: #ffd670;
-    background-image:url("test.png");
+    background-image:url('media/images/photoProf/MartinDessin.png');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  div.item:nth-of-type(4):hover{
+    background-image:url('media/images/photoProf/MartinTest.png');
   }
   div.item:nth-of-type(5) {
     --offset: 5;
@@ -123,8 +124,37 @@
     --offset: 14;
     background-color: #ce9e3d;
   }
-  
-  //Les boutons
+  .nomProf{
+    position: relative;
+    bottom: 30px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    & p{
+      margin: 0;
+      text-align: center;
+      font-size: 2em;
+      color: grey;
+      font-family: $police__titre-principal;
+    }
+  }
+  .description{
+    position:absolute;
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    margin-left: auto; 
+    margin-right: auto; 
+    & p{
+      margin: 0;
+      text-align: center;
+      font-size: 2em;
+      color: grey;
+      font-family: $police__titre-principal;
+    }
+  }
+  //Les boutons input
   input:nth-of-type(1) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
