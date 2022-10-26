@@ -22,7 +22,13 @@
 
 <body <?php body_class(); ?>>
 	<header>
-		<div class="logo"></div>
+		<div class="logo">
+			<?php
+				if ( function_exists( 'the_custom_logo' ) ) {
+					the_custom_logo();
+				}
+			?>
+		</div>
 		<div class="menu-burger">
 			<div id="burger__fondActif">
 				<?php 
