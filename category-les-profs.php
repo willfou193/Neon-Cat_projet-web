@@ -16,7 +16,6 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-    <h1>Les profs</h1>
 		<?php
 		if ( have_posts() ) :?>
 			

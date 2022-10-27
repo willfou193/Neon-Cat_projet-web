@@ -119,6 +119,15 @@ main {
 
 body {
   background-color: #1A1A1A;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+}
+
+header div {
+  width: 33.33%;
 }
 
 .menu-burger {
@@ -128,7 +137,7 @@ body {
 .menu-burger #burger__contenant {
   width: 60px;
   height: 60px;
-  margin: 20px auto 0 auto;
+  margin: 40px auto 0 auto;
   cursor: pointer;
 }
 
@@ -195,16 +204,10 @@ body {
   height: 600px;
   margin: 0;
   margin-top: 200px;
-  display: grid;
-  grid-template-rows: 500px 100px;
-  grid-template-columns: 1fr 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 1fr;
-  align-items: center;
-  justify-items: center;
+  overflow-x: hidden;
 }
 
 div.carousel {
-  grid-row: 1 / 2;
-  grid-column: 1 / 17;
   width: 100vw;
   height: 500px;
   display: flex;
@@ -227,6 +230,7 @@ div.item {
   transition: all 0.25s linear;
   transform: translateX(calc(-35vw * var(--r)));
   z-index: calc((var(--position) - var(--abs)));
+  border: 2px solid white;
 }
 
 #bouton__droit {
@@ -348,7 +352,7 @@ div.item p:nth-of-type(1) {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -5%;
+  bottom: 5%;
   margin-left: auto;
   margin-right: auto;
   margin: 0;
@@ -376,6 +380,8 @@ div.item figure {
   position: absolute;
   top: 0;
   left: 0;
+  width: 90%;
+  height: 90%;
 }
 
 div.item figure:nth-of-type(1) {
@@ -531,6 +537,7 @@ input:nth-of-type(14):checked ~ div.carousel {
   text-align: center;
   font-size: 2em;
   cursor: pointer;
+  z-index: 100;
 }
 
 @media only screen and (max-width: 767px) {
@@ -605,6 +612,14 @@ input:nth-of-type(14):checked ~ div.carousel {
 h1 {
   color: white;
   text-align: center;
+  font-size: 3em;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+  color: #FFFBF6;
+  text-shadow: rgba(255, 255, 255, 0.541) 0px 0px 5px, rgba(255, 255, 255, 0.596) 0px 0px 10px, #4780C6 0px 0px 10px, #4780C6 0px 0px 15px, #4780C6 0px 0px 20px, #4780C6 0px 0px 25px, #4780C6 0px 0px 30px, #4780C6 0px 0px 35px;
 }
 
 h2 {
@@ -664,15 +679,6 @@ body {
  */
 main {
   display: block;
-}
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content

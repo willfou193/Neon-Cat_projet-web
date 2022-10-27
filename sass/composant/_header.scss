@@ -1,9 +1,15 @@
+header{
+    display: flex;
+    & div{
+        width: 33.33%;
+    }
+}
 .menu-burger{
     height: 10%;
     & #burger__contenant{
         width: 60px;
         height: 60px;
-        margin: 20px auto 0 auto;
+        margin: 40px auto 0 auto;
         cursor: pointer;
         .burger__ligne{
             width: 100%;
