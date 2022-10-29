@@ -160,25 +160,31 @@ header div {
   transform: translate(50%, -50%);
 }
 
-.menu-burger #burger__fondActif .menu {
+.menu-burger #burger__fondActif .menu-menu-1-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.menu-burger #burger__fondActif .menu ul {
+.menu-burger #burger__fondActif .menu-menu-1-container ul {
   padding: 0px;
   margin: 0px;
 }
 
-.menu-burger #burger__fondActif .menu ul li {
-  margin: 20px 0;
-  text-align: center;
+.menu-burger #burger__fondActif .menu-menu-1-container ul :hover {
+  background-color: #adadad;
+  transition: .2s ease-in-out;
 }
 
-.menu-burger #burger__fondActif .menu ul li a {
-  font-size: 2em;
+.menu-burger #burger__fondActif .menu-menu-1-container ul li {
+  text-align: center;
+  padding: 10px 0;
+  margin: 10px 0;
+  transition: .2s ease-in-out;
+}
+
+.menu-burger #burger__fondActif .menu-menu-1-container ul li a {
   font-variant: small-caps;
 }
 
@@ -237,21 +243,28 @@ div.item {
 #bouton__droit {
   width: 100px;
   height: 100px;
-  background-color: white;
   position: absolute;
   right: 0;
+  top: 50%;
   z-index: 10;
   cursor: pointer;
+  background-image: url("media/images/Fleche.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(180deg);
 }
 
 #bouton__gauche {
   width: 100px;
   height: 100px;
-  background-color: white;
   position: absolute;
   left: 0;
+  top: 50%;
   z-index: 10;
   cursor: pointer;
+  background-image: url("media/images/Fleche.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 div.item h2 {
@@ -310,6 +323,7 @@ div.item figure {
 
 div.item figure:nth-of-type(1) {
   z-index: 1;
+  transition: .5s ease-in-out;
 }
 
 div.item figure:nth-of-type(1):hover {
@@ -480,10 +494,11 @@ div.item:nth-of-type(14) {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background-color: orange;
+  background-color: transparent;
   color: white;
   text-align: center;
   display: none;
+  border: 1px solid black;
 }
 
 @media only screen and (max-width: 767px) {
@@ -552,7 +567,10 @@ p {
 }
 
 a {
+  font-size: 2.5em;
   text-decoration: none;
+  color: #000000;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 li {

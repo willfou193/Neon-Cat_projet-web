@@ -28,23 +28,31 @@ header{
         top: 50%;
         right: 50%;
         transform: translate(50%,-50%);
-        & .menu{
+        & .menu-menu-1-container{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            & ul {
-                padding: 0px;
-                margin: 0px;
-                & li{
-                    margin: 20px 0;
-                    text-align: center;
-                    & a{
-                        font-size: 2em;
-                        font-variant: small-caps;
+             & ul {
+                    padding: 0px;
+                    margin: 0px;
+                    & :hover{
+                        background-color: rgb(173, 173, 173);
+                        transition: .2s ease-in-out;
+                    }
+                    & li{
+                        text-align: center;
+                        padding: 10px 0;
+                        margin: 10px 0;
+                        transition: .2s ease-in-out;
+                        
+                            & a{
+                                font-variant: small-caps;
+                            }
                     }
                 }
-            }
+           
+            
         }
     }
 }

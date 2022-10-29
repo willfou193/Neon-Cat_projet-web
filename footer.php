@@ -14,11 +14,11 @@
 	<footer>
 		<div id="contenant__footer">
 			<div id="contenant__bulles">
-				<div class="footer__bulle">1</div>
-				<div class="footer__bulle">2</div>
-				<div class="footer__bulle">3</div>
-				<div class="footer__bulle">4</div>
-				<div class="footer__bulle">5</div>
+				<div class="footer__bulle"></div>
+				<div class="footer__bulle"></div>
+				<div class="footer__bulle"></div>
+				<div class="footer__bulle"></div>
+				<div class="footer__bulle"></div>
 			</div>
 		</div>
 		<!-- ?php 
