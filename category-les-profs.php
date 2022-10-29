@@ -20,6 +20,8 @@ get_header();
 		if ( have_posts() ) :?>
 			
 			<div class="contenant prof">
+                <div id="bouton__droit"></div>
+                <div id="bouton__gauche"></div>
                     <input class="inputProf" type="radio" name="position" />
                     <input class="inputProf" type="radio" name="position" checked/>
                     <input class="inputProf" type="radio" name="position" />
@@ -64,8 +66,7 @@ get_header();
                         <div class="item prof"></div>
                         <div class="item prof"></div>
                     </div>
-                    <div id="bouton__droit"></div>
-                    <div id="bouton__gauche"></div>
+                    
                    
                     
                 </div>
