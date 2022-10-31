@@ -22,4 +22,9 @@ main{
 body{
     background-color:$couleur__background-body;
     overflow: hidden;
+    background-image: url('media/images/ligneback.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh   ;
 }

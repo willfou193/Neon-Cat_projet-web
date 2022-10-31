@@ -28,25 +28,16 @@ get_header();
                     <input class="inputProf" type="radio" name="position" />
                     <input class="inputProf" type="radio" name="position" />
                     <input class="inputProf" type="radio" name="position" />
-                    <input class="inputProf" type="radio" name="position" />
-                    <input class="inputProf" type="radio" name="position" />
-                    <input class="inputProf" type="radio" name="position" />
-                    <input class="inputProf" type="radio" name="position" />
-                    <input class="inputProf" type="radio" name="position" />
-                    <input class="inputProf" type="radio" name="position" />
-                    <input class="inputProf" type="radio" name="position" />
-                    <input class="inputProf" type="radio" name="position" />
             
                     <div class="carousel">
 						<?php
 							/* Start the Loop */
-                            global $query_string;
-                            query_posts ('posts_per_page=14');
+                            
 							while ( have_posts() ) :?>
-							<div class="item prof">
+							<div class="item cours">
 							<?php
 								the_post();
-								the_content();?>
+								echo the_content();?>
 							</div>
 								<?php
 							endwhile;

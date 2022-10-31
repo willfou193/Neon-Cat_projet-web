@@ -120,6 +120,11 @@ main {
 body {
   background-color: #1A1A1A;
   overflow: hidden;
+  background-image: url("media/images/ligneback.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
 }
 
 header {
@@ -139,6 +144,7 @@ header div {
   height: 60px;
   margin: 40px auto 0 auto;
   cursor: pointer;
+  z-index: 100;
 }
 
 .menu-burger #burger__contenant .burger__ligne {
@@ -150,19 +156,22 @@ header div {
 
 .menu-burger #burger__fondActif {
   display: none;
-  z-index: 100;
-  background-color: white;
+  z-index: 10;
+  background-image: url("media/images/backgroundMenu.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
-  width: 700px;
-  height: 700px;
+  width: 800px;
+  height: 800px;
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
+  z-index: 10;
 }
 
 .menu-burger #burger__fondActif .menu-menu-1-container {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -207,14 +216,14 @@ header div {
 
 .contenant {
   width: 100%;
-  height: 600px;
+  height: 50vh;
   margin: 0;
-  margin-top: 100px;
+  margin-top: Min(100px, 5%);
 }
 
 div.carousel {
   width: 100vw;
-  height: 700px;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,15 +247,18 @@ div.item {
   border: 2px solid white;
   margin: 0 100px;
   border-radius: 10%;
+  background-image: url("media/images/backgroundItem.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #bouton__droit {
   width: 100px;
   height: 100px;
   position: absolute;
-  right: 0;
+  right: 1%;
   top: 50%;
-  z-index: 10;
+  z-index: 100;
   cursor: pointer;
   background-image: url("media/images/Fleche.png");
   background-repeat: no-repeat;
@@ -258,9 +270,9 @@ div.item {
   width: 100px;
   height: 100px;
   position: absolute;
-  left: 0;
+  left: 1%;
   top: 50%;
-  z-index: 10;
+  z-index: 100;
   cursor: pointer;
   background-image: url("media/images/Fleche.png");
   background-repeat: no-repeat;
@@ -270,13 +282,13 @@ div.item {
 div.item h2 {
   z-index: 2;
   position: relative;
-  bottom: 20px;
+  bottom: 30px;
   left: 0;
   right: 0;
   margin: 0;
   text-align: center;
   color: #FFFBF6;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 div.item p:nth-of-type(1) {
@@ -494,7 +506,8 @@ div.item:nth-of-type(14) {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background-color: transparent;
+  background-color: black;
+  border: 2   px white solid;
   color: white;
   text-align: center;
   display: none;
@@ -540,7 +553,7 @@ div.item:nth-of-type(14) {
 h1 {
   color: white;
   text-align: center;
-  font-size: 5em;
+  font-size: Min(5em, 6rem);
   margin: 0;
   text-transform: uppercase;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -551,7 +564,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: Clamp(1.5em, 2.5em 2.5em);
 }
 
 h3 {
