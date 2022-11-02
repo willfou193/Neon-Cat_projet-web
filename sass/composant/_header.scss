@@ -14,7 +14,12 @@ header{
             justify-content: space-around;
             & li{
                 & a{
+                    text-transform: uppercase;
+                    font-family: culottes;
                     color: $couleur__font-titre;
+                    &:hover{
+                        color:$couleur__autre1 ;
+                    }
                 }
             }
         }
