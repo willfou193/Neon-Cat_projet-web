@@ -39,9 +39,6 @@ get_header();
             
                     <div class="carousel">
 						<?php
-							/* Start the Loop */
-                            global $query_string;
-                            query_posts ('posts_per_page=14');
 							while ( have_posts() ) :?>
 							<div class="item prof">
 							<?php

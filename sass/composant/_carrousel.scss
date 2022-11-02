@@ -29,7 +29,7 @@
     --r: calc(var(--position) - var(--offset)); //1 - la position des carte
     --abs: max(calc(var(--r) * -1), var(--r)); // 0 ou -1 ou -2... donc 0 1 ou 2
     transition: all 0.25s linear;
-    transform: translateX(calc(-35vw * var(--r)))scale(0.6); //300px de base
+    transform: translateX(calc(-31vw * var(--r)))scale(0.6); //300px de base
     z-index: calc((var(--position) - var(--abs)));
     border: 2px solid white;
     margin: 0 100px;
@@ -187,15 +187,15 @@ div.item p:nth-of-type(2){
    // les cartes de chacun des profs
    div.item:nth-of-type(1) {
     --offset: 1;
-    transform: translateX(calc(-35vw * var(--r)))scale(0.6);
+    transform: translateX(calc(-31vw * var(--r)))scale(0.6);
   }
   div.item:nth-of-type(2) {
     --offset: 2;
-    transform:translateX(calc(-35vw * var(--r)))scale(1);
+    transform:translateX(calc(-31vw * var(--r)))scale(1);
   }
   div.item:nth-of-type(3) {
     --offset: 3;
-    transform:translateX(calc(-35vw * var(--r))) scale(0.6);
+    transform:translateX(calc(-31vw * var(--r))) scale(0.6);
   }
   div.item:nth-of-type(4) {
     --offset: 4;

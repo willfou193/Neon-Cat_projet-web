@@ -28,7 +28,7 @@ get_header();
                     <input class="inputProf" type="radio" name="position" />
                     <input class="inputProf" type="radio" name="position" />
                     <input class="inputProf" type="radio" name="position" />
-            
+                 
                     <div class="carousel">
 						<?php
 							/* Start the Loop */

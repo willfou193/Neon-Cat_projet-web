@@ -98,23 +98,16 @@ main {
 
 .accueil {
   width: 100%;
-  background-color: #1A1A1A;
+  height: calc(100vh - 200px);
 }
 
-.accueil p {
-  margin: 0;
-  padding: 20px 0;
-  text-align: center;
-  color: white;
+.accueil #videoAcc {
+  opacity: 0.5;
 }
 
-.menu-principal {
-  width: 20%;
-  height: 100vh;
-}
-
-.menu-principal p {
-  text-align: center;
+.accueil .logo {
+  position: absolute;
+  z-index: 5;
 }
 
 body {
@@ -133,6 +126,24 @@ header {
 
 header div {
   width: 33.33%;
+}
+
+.menu-burgerHome {
+  margin-top: 100px;
+  width: 100vw;
+}
+
+.menu-burgerHome div {
+  width: 100%;
+}
+
+.menu-burgerHome div ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-burgerHome div ul li a {
+  color: #FFFBF6;
 }
 
 .menu-burger {
@@ -242,7 +253,7 @@ div.item {
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 0.25s linear;
-  transform: translateX(calc(-35vw * var(--r))) scale(0.6);
+  transform: translateX(calc(-31vw * var(--r))) scale(0.6);
   z-index: calc((var(--position) - var(--abs)));
   border: 2px solid white;
   margin: 0 100px;
@@ -405,17 +416,17 @@ input:nth-of-type(14):checked ~ div.carousel {
 
 div.item:nth-of-type(1) {
   --offset: 1;
-  transform: translateX(calc(-35vw * var(--r))) scale(0.6);
+  transform: translateX(calc(-31vw * var(--r))) scale(0.6);
 }
 
 div.item:nth-of-type(2) {
   --offset: 2;
-  transform: translateX(calc(-35vw * var(--r))) scale(1);
+  transform: translateX(calc(-31vw * var(--r))) scale(1);
 }
 
 div.item:nth-of-type(3) {
   --offset: 3;
-  transform: translateX(calc(-35vw * var(--r))) scale(0.6);
+  transform: translateX(calc(-31vw * var(--r))) scale(0.6);
 }
 
 div.item:nth-of-type(4) {

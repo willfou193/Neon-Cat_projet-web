@@ -63,9 +63,9 @@ function carrouselMinus(){
     indexPre -= 1;
     indexPost -= 1;
     boutonRadio[index-1].checked = true;
-    itemProf[index-1].style.transform = "translateX(calc(-35vw * var(--r)))scale(1)";
-    itemProf[indexPre-1].style.transform = "translateX(calc(-35vw * var(--r)))scale(0.6)";
-    itemProf[indexPost-1].style.transform = "translateX(calc(-35vw * var(--r)))scale(0.6)";
+    itemProf[index-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(1)";
+    itemProf[indexPre-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
+    itemProf[indexPost-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
 }
 function carrouselPlus(){
     if(index >= boutonRadio.length){
@@ -86,7 +86,7 @@ function carrouselPlus(){
     console.log(itemProf[indexPre-1])
     console.log(itemProf[indexPost-1])
     
-    itemProf[index-1].style.transform = "translateX(calc(-35vw * var(--r)))scale(1)";
-    itemProf[indexPre-1].style.transform = "translateX(calc(-35vw * var(--r)))scale(0.6)";
-    itemProf[indexPost-1].style.transform = "translateX(calc(-35vw * var(--r)))scale(0.6)";
+    itemProf[index-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(1)";
+    itemProf[indexPre-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
+    itemProf[indexPost-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
 }
