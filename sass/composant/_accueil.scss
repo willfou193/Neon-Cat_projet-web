@@ -4,21 +4,21 @@ main{
 }
 .accueil{
     width: 100%;
-    background-color: $couleur__background-body;
-    & p{
-        margin: 0;
-        padding: 20px 0;
-        text-align: center;
-        color: white;
+    height: calc(100vh - 200px);
+    & #videoAcc{
+        opacity: 0.5;
     }
-}
-.menu-principal{
-    width: 20%;
-    height: 100vh;
-    & p{
-        text-align: center;
+    & .logo{
+        position: absolute;
+        z-index: 5;
     }
 }
 body{
     background-color:$couleur__background-body;
+    overflow: hidden;
+    background-image: url('media/images/ligneback.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh   ;
 }

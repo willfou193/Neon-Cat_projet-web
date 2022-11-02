@@ -22,7 +22,13 @@
 
 <body <?php body_class(); ?>>
 	<header>
-		<div class="logo"></div>
+		<div class="logo">
+			<?php
+				if ( function_exists( 'the_custom_logo' ) ) {
+					the_custom_logo();
+				}
+			?>
+		</div>
 		<div class="menu-burger">
 			<div id="burger__fondActif">
 				<?php 
@@ -38,8 +44,11 @@
 				<div class="burger__ligne"></div>
 				<div class="burger__ligne"></div>
 			</div>
+			<h1>
+			<?php wp_title(false) ?>
+			</h1>
 		</div>
-		<div class="menu-burger__ouvert"></div>
+		<div></div>
 	</header>
 <?php wp_body_open(); ?>
 <!--<div id="page" class="site">

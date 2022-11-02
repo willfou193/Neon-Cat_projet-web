@@ -2,9 +2,18 @@
 h1{
     color: white;
     text-align: center;
-}
+    font-size: Min(5em,6rem);
+    margin: 0;
+    text-transform: uppercase;
+    font-family:$police__titre-principal  ;
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: $couleur__font-titre;
+    text-shadow: rgba(255, 255, 255, 0.541) 0px 0px 5px, rgba(255, 255, 255, 0.596) 0px 0px 10px, 
+    $couleur__autre2 0px 0px 10px, $couleur__autre2 0px 0px 15px, $couleur__autre2 0px 0px 20px, 
+    $couleur__autre2 0px 0px 25px, $couleur__autre2 0px 0px 30px, $couleur__autre2 0px 0px 35px;}
 h2{
-    color: white;
+    font-size: Clamp(1.5em,2.5em 2.5em);
 }
 h3{
     color: white;
@@ -19,7 +28,10 @@ p{
 }
 
 a{
+    font-size: 2.5em;
     text-decoration: none;
+    color: $couleur__background-menu;
+    font-family: $police__titre-principal ;
 }
 
 li{

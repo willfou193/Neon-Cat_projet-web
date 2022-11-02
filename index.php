@@ -16,7 +16,6 @@
 <?php get_header(); ?>
 <main>
     <section class="accueil">
-        <p>Page d'accueil</p>
         
     </section>
     <iframe width="1024" height="576" src="https://www.youtube.com/embed/WGvBFuDdNzE?&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
