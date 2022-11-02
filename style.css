@@ -13,22 +13,22 @@ VARIABLES
 --------------------------------------------------------- */
 @font-face {
   font-family: culottes;
-  src: url(../../fonts/SansCulottes.ttf);
+  src: url(fonts/SansCulottes.ttf);
 }
 
 @font-face {
   font-family: neon;
-  src: url(../../fonts/Neonderthaw-Regular.ttf);
+  src: url(fonts/Neonderthaw-Regular.ttf);
 }
 
 @font-face {
   font-family: kanit;
-  src: url(../../fonts/Kanit-Light.ttf);
+  src: url(fonts/Kanit-Light.ttf);
 }
 
 @font-face {
   font-family: kosan;
-  src: url(../../fonts/KosanNonCommercial.otf);
+  src: url(fonts/KosanNonCommercial.otf);
 }
 
 /* ---------------------------------------------------------
