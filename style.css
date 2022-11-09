@@ -128,6 +128,15 @@ header div {
   width: 33.33%;
 }
 
+@media only screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+  }
+  header div {
+    width: 100%;
+  }
+}
+
 .menu-burgerHome {
   margin-top: 100px;
   width: 100vw;
@@ -164,6 +173,12 @@ header div {
   z-index: 100;
 }
 
+@media only screen and (max-width: 767px) {
+  .menu-burger #burger__contenant {
+    margin-top: 20px;
+  }
+}
+
 .menu-burger #burger__contenant .burger__ligne {
   width: 100%;
   height: 6px;
@@ -173,17 +188,14 @@ header div {
 
 .menu-burger #burger__fondActif {
   display: none;
-  z-index: 10;
-  background-image: url("media/images/backgroundMenu.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  z-index: 100;
+  background-color: white;
   position: absolute;
   width: 800px;
   height: 800px;
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  z-index: 10;
 }
 
 .menu-burger #burger__fondActif .menu-menu-1-container {
@@ -214,33 +226,39 @@ header div {
   font-variant: small-caps;
 }
 
-.menu-principal h2 {
-  text-align: center;
+.logo a img {
+  margin-left: 10px;
 }
 
-.menu-principal .menu-principal__nav {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50vh;
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .logo a img {
+    width: 300px;
+    height: auto;
+  }
 }
 
-.menu-principal .menu-principal__nav a {
-  margin-top: 1em;
-  text-decoration: none;
-  font-size: 2em;
-  text-align: center;
+@media only screen and (max-width: 767px) {
+  .logo a img {
+    width: 190px;
+    height: auto;
+  }
 }
 
 .contenant {
   width: 100%;
   height: 50vh;
   margin: 0;
-  margin-top: Min(150px, 5%);
+  margin-top: Max(200px, 20%);
+}
+
+@media only screen and (max-width: 767px) {
+  .contenant {
+    margin-top: Max(300px, 30%);
+  }
 }
 
 div.carousel {
   width: 100vw;
-  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,10 +270,10 @@ div.carousel {
 
 div.item {
   position: absolute;
-  max-width: 800px;
+  max-width: 700px;
   width: 35%;
   height: 0;
-  padding-bottom: Min(35%, 800px);
+  padding-bottom: Min(35%, 700px);
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 0.25s linear;
@@ -267,6 +285,14 @@ div.item {
   background-image: url("media/images/backgroundItem.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  div.item {
+    transform: translateX(calc(-100vw * var(--r))) scale(0.6);
+    width: 80%;
+    padding-bottom: Min(80%, 700px);
+  }
 }
 
 #bouton__droit {
@@ -296,10 +322,14 @@ div.item {
   background-size: cover;
 }
 
+.nomFam {
+  font-family: neon;
+}
+
 div.item h2 {
   z-index: 2;
   position: relative;
-  bottom: 30px;
+  bottom: Min(30px, 10%);
   left: 0;
   right: 0;
   margin: 0;
@@ -317,10 +347,10 @@ div.item p:nth-of-type(1) {
   margin-right: auto;
   margin: 0;
   text-align: center;
-  font-size: 2em;
+  font-size: 2vw;
   color: grey;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  z-index: 20;
+  z-index: 12;
 }
 
 div.item p:nth-of-type(2) {
@@ -328,14 +358,14 @@ div.item p:nth-of-type(2) {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -15%;
+  bottom: -18%;
   margin-left: auto;
   margin-right: auto;
   margin: 0;
   text-align: center;
   color: grey;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1vw;
 }
 
 div.item figure {
@@ -345,8 +375,8 @@ div.item figure {
   bottom: 0px;
   margin-left: auto;
   margin-right: auto;
-  width: 87%;
-  height: 87%;
+  width: 85%;
+  height: 85%;
   border-radius: 10%;
 }
 
@@ -422,7 +452,12 @@ input:nth-of-type(14):checked ~ div.carousel {
 
 div.item:nth-of-type(1) {
   --offset: 1;
-  transform: translateX(calc(-31vw * var(--r))) scale(0.6);
+}
+
+@media only screen and (max-width: 767px) {
+  div.item:nth-of-type(1) {
+    transform: translateX(calc(-100vw * var(--r))) scale(0.6);
+  }
 }
 
 div.item:nth-of-type(2) {
@@ -432,7 +467,12 @@ div.item:nth-of-type(2) {
 
 div.item:nth-of-type(3) {
   --offset: 3;
-  transform: translateX(calc(-31vw * var(--r))) scale(0.6);
+}
+
+@media only screen and (max-width: 767px) {
+  div.item:nth-of-type(3) {
+    transform: translateX(calc(-100vw * var(--r))) scale(0.6);
+  }
 }
 
 div.item:nth-of-type(4) {
@@ -498,8 +538,8 @@ div.item:nth-of-type(14) {
 
 @media only screen and (max-width: 767px) {
   #contenant__footer {
-    left: 20px;
-    bottom: 20px;
+    left: calc(100% - 100px);
+    top: 10px;
     width: 80px;
     height: 80px;
     font-size: 1em;
@@ -507,13 +547,18 @@ div.item:nth-of-type(14) {
   }
 }
 
+#contenant__bulles {
+  display: flex;
+}
+
 @media only screen and (max-width: 767px) {
   #contenant__bulles {
     position: fixed;
-    display: flex;
-    width: 90%;
-    margin-left: 10%;
-    bottom: 30px;
+    display: none;
+    flex-direction: column;
+    width: 20%;
+    height: 100vh;
+    top: 30px;
     justify-content: space-around;
   }
 }
@@ -523,7 +568,7 @@ div.item:nth-of-type(14) {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background-color: black;
+  background-color: white;
   border: 2   px white solid;
   color: white;
   text-align: center;
@@ -570,7 +615,7 @@ div.item:nth-of-type(14) {
 h1 {
   color: white;
   text-align: center;
-  font-size: Min(5em, 6rem);
+  font-size: Max(3.2vw, 2.5em);
   margin: 0;
   text-transform: uppercase;
   font-family: culottes;
@@ -581,7 +626,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.5vw;
 }
 
 h3 {

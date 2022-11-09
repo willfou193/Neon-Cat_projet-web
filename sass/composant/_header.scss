@@ -3,10 +3,17 @@ header{
     & div{
         width: 33.33%;
     }
+    @include screen('mobile')  {
+        flex-direction: column;
+        & div{
+            width:100%;
+        }
+    }
 }
 .menu-burgerHome {
     margin-top: 100px;
     width: 100vw;
+    
     & div{
         width: 100%;
         & ul{
@@ -35,6 +42,9 @@ header{
         margin: 40px auto 0 auto;
         cursor: pointer;
         z-index: 100;
+        @include screen('mobile')  {
+            margin-top: 20px;
+        }
         .burger__ligne{
             width: 100%;
             height: 6px;
@@ -44,17 +54,14 @@ header{
     }
     & #burger__fondActif{
         display: none;
-        z-index: 10;
-        background-image: url('media/images/backgroundMenu.png');
-        background-repeat: no-repeat;
-        background-size: cover;
+        z-index: 100;
+        background-color: white;
         position: absolute;
         width: 800px;
         height:800px;
         top: 50%;
         right: 50%;
         transform: translate(50%,-50%);
-        z-index: 10;
         & .menu-menu-1-container{
             position: absolute;
             top: 40%;

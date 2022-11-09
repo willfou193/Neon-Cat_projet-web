@@ -47,6 +47,7 @@ var itemProf = document.getElementsByClassName("item prof");
 let index = 2;
 let indexPre = 1;
 let indexPost = 3;
+var viewPortMax = window.matchMedia("(max-wdith: 767px)");
 boutonDroit.addEventListener("click", carrouselPlus)
 boutonGauche.addEventListener("click", carrouselMinus)
 function carrouselMinus(){
@@ -63,9 +64,18 @@ function carrouselMinus(){
     indexPre -= 1;
     indexPost -= 1;
     boutonRadio[index-1].checked = true;
-    itemProf[index-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(1)";
-    itemProf[indexPre-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
-    itemProf[indexPost-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
+    
+    if (window.innerWidth < 769) {
+        itemProf[index-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(1)";
+        itemProf[indexPre-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(0.6)";
+        itemProf[indexPost-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(0.6)";
+    }
+    if(window.innerWidth > 769){
+        itemProf[index-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(1)";
+        itemProf[indexPre-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
+        itemProf[indexPost-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
+    }
+    
 }
 function carrouselPlus(){
     if(index >= boutonRadio.length){
@@ -85,8 +95,28 @@ function carrouselPlus(){
     boutonRadio[index-1].checked = true
     console.log(itemProf[indexPre-1])
     console.log(itemProf[indexPost-1])
+    if (window.innerWidth < 769) {
+        console.log("plus bas");
+        itemProf[index-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(1)";
+        itemProf[indexPre-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(0.6)";
+        itemProf[indexPost-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(0.6)";
+    }
+    if(window.innerWidth > 769){
+        itemProf[index-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(1)";
+        itemProf[indexPre-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
+        itemProf[indexPost-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
+    }
     
-    itemProf[index-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(1)";
-    itemProf[indexPre-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
-    itemProf[indexPost-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
 }
+window.onresize = function() {         
+    if (window.innerWidth < 769) {
+        itemProf[index-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(1)";
+        itemProf[indexPre-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(0.6)";
+        itemProf[indexPost-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(0.6)";
+    }
+    if(window.innerWidth > 769){
+        itemProf[index-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(1)";
+        itemProf[indexPre-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
+        itemProf[indexPost-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)";
+    }
+};
