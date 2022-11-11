@@ -101,7 +101,7 @@ function wpb_custom_new_menu() {
 	register_nav_menus(
 	  array(
 		'menu_burger' => __( 'Menu burger' ),
-
+		'menu_cours' => __( 'Menu cours' ),
 	  )
 	);
   }

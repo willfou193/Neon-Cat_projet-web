@@ -12,13 +12,15 @@ header{
 }
 .menu-burgerHome {
     margin-top: 100px;
-    width: 100vw;
+    width: 92%;
+    margin: 100px auto 0 auto;
     
     & div{
         width: 100%;
         & ul{
+            padding: 0;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             & li{
                 & a{
                     text-transform: uppercase;
