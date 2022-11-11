@@ -41,11 +41,11 @@
 		<div class="menuSide">
 			<div class="menuCours">
 				<ul>
-					<li>Web</li>
-					<li>Web</li>
-					<li>Web</li>
-					<li>Web</li>
-					<li>Web</li>
+					<li><a>Web</a></li>
+					<li><a>Web</a></li>
+					<li><a>Web</a></li>
+					<li><a>Web</a></li>
+					<li><a>Web</a></li>
 				</ul>
 			</div>
 			<div id="cheminement">
@@ -53,11 +53,16 @@
 			</div>
 			<div id="stage">
 				<p>Stage</p>
+				<div></div>
 			</div>
 		</div>
 		<div id="videoAcc_Contenant">
- 			<!--<iframe id="videoAcc" width="1800" height="1000" src="https://www.youtube.com/embed/WGvBFuDdNzE?&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			 -->
+			<div id="video">
+				<iframe id="videoAcc" src="https://www.youtube.com/embed/WGvBFuDdNzE?&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			 
+			</div>
+ 			
+			 
 		</div>
        
     </section>

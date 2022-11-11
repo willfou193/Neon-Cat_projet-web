@@ -28,10 +28,11 @@ p{
 }
 
 a{
-    font-size: Max(2.5vw, 1.7em);
+    font-size: Max(2.1vw, 1.7em);
     text-decoration: none;
     color: $couleur__background-menu;
-    font-family: $police__titre-principal ;
+    font-family: kosan ;
+    color: $couleur__font-sous-titre;
 }
 
 li{
