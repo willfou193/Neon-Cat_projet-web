@@ -38,15 +38,28 @@
 <main>
         
     <section class="accueil">
-        <div class="logo">
-			<?php
-				if ( function_exists( 'the_custom_logo' ) ) {
-					the_custom_logo();
-				}
-			?>
+		<div class="menuSide">
+			<div class="menuCours">
+				<ul>
+					<li>Web</li>
+					<li>Web</li>
+					<li>Web</li>
+					<li>Web</li>
+					<li>Web</li>
+				</ul>
+			</div>
+			<div id="cheminement">
+				<p>Cheminement</p>
+			</div>
+			<div id="stage">
+				<p>Stage</p>
+			</div>
 		</div>
-        <iframe id="videoAcc" width="1200" height="800" src="https://www.youtube.com/embed/WGvBFuDdNzE?&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
+		<div id="videoAcc_Contenant">
+ 			<!--<iframe id="videoAcc" width="1800" height="1000" src="https://www.youtube.com/embed/WGvBFuDdNzE?&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			 -->
+		</div>
+       
     </section>
    
 </main>    

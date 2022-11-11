@@ -2,10 +2,13 @@
     width: 100%;
     height: 50vh;
     margin: 0;
-    margin-top:Max(200px,20%);
+    margin-top:Min(25vw,30rem);
     @include screen('mobile')  {
-      margin-top:Max(300px,30%);
-  }
+      margin-top:Min(50vw,60rem);
+    }
+    @include screen('tablet')  {
+      margin-top:Min(25vw,30rem);
+    }
   }
   
   div.carousel {
@@ -52,26 +55,41 @@
     height: 100px;
     position: absolute;
     right: 1%;
-    top: 50%;
+    top: Max(calc(200px + 33,3%),calc(20%,33,3%));
     z-index: 100;
     cursor: pointer;
     background-image: url('media/images/Fleche.png');
     background-repeat: no-repeat;
     background-size: cover;
     transform: rotate(180deg);
-
+    @include screen('mobile')  {
+      width: 80px;
+      height: 80px;
+    }
+    @include screen('tablet')  {
+      width: 60px;
+      height: 60px;
+    }
   }
   #bouton__gauche{
     width: 100px;
     height: 100px;
     position: absolute;
     left: 1%;
-    top: 50%;
+    top: Max(calc(200px + 33,3%),calc(20%,33,3%));
     z-index: 100;
     cursor: pointer;
     background-image: url('media/images/Fleche.png');
     background-repeat: no-repeat;
     background-size: cover;
+    @include screen('mobile')  {
+      width: 80px;
+      height: 80px;
+    }
+    @include screen('tablet')  {
+      width: 60px;
+      height: 60px;
+    }
   }
   .nomFam{
     font-family: neon;
@@ -79,13 +97,16 @@
   div.item h2{
     z-index: 2;
     position: relative;
-    bottom: Min(30px,10%);
+    bottom: 4vw;
     left: 0; 
     right: 0;
     margin: 0;
     text-align: center;
     color: $couleur__font-titre;
     font-family:kosan ;
+    @include screen('mobile')  {
+      font-size: 5vw;
+    }
   }
   div.item p:nth-of-type(1){
     position:absolute;
@@ -100,20 +121,23 @@
     color: grey;
     font-family: $police__titre-principal;
     z-index: 12;
+    @include screen('mobile')  {
+      font-size: 6vw;
+    }
 }
 div.item p:nth-of-type(2){
     z-index: 2;
     position:absolute;
     left: 0; 
     right: 0; 
-    bottom: -18%;
+    bottom: Min(-22%,-8rem);
     margin-left: auto; 
     margin-right: auto; 
     margin: 0;
     text-align: center;
     color: grey;
     font-family: $police__titre-secondaire;
-    font-size: 1.1vw;
+    font-size: Max(1.1vw, 1em);
 }
   div.item figure{
     position:absolute;

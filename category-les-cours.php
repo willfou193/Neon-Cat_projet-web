@@ -34,10 +34,17 @@ get_header();
 							/* Start the Loop */
                             
 							while ( have_posts() ) :?>
-							<div class="item cours">
+							<div class="item prof">
 							<?php
 								the_post();
 								echo the_content();?>
+								<?php 
+									wp_nav_menu(
+										array(
+											"menu" => "Menu-Cours"
+										)
+								);
+								?>
 							</div>
 								<?php
 							endwhile;

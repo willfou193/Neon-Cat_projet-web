@@ -1,17 +1,36 @@
 // Regroupe le SCSS de la page d'accueil
 main{
-    display: flex;
+    
 }
 .accueil{
-    width: 100%;
-    height: calc(100vh - 200px);
-    & #videoAcc{
+    width: 92%;
+    margin: 0 auto;
+    height: calc(100vh - 300px);
+    display: flex;
+    justify-content: space-between;
+    .menuSide{
+        width: 20%;
+        background-color: green;
+        .menuCours{
+
+        }
+        #cheminement{
+
+        }
+        #stage{
+            
+        }
+    }
+    #videoAcc_Contenant{
         opacity: 0.5;
+        float: right;
+        width: 80%;
+        background-color: red;
+        & #videoAcc{
+        }
     }
-    & .logo{
-        position: absolute;
-        z-index: 5;
-    }
+    
+    
 }
 body{
     background-color:$couleur__background-body;
@@ -20,5 +39,8 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh   ;
+    height: 100vh;
+    @include screen('mobile')  {
+        
+      }
 }

@@ -13,7 +13,7 @@ h1{
     $couleur__autre2 0px 0px 10px, $couleur__autre2 0px 0px 15px, $couleur__autre2 0px 0px 20px, 
     $couleur__autre2 0px 0px 25px, $couleur__autre2 0px 0px 30px, $couleur__autre2 0px 0px 35px;}
 h2{
-    font-size: 2.5vw;
+    font-size: Max(2.5vw, 1em);
 }
 h3{
     color: white;
@@ -28,7 +28,7 @@ p{
 }
 
 a{
-    font-size: 2.5em;
+    font-size: Max(2.5vw, 1.7em);
     text-decoration: none;
     color: $couleur__background-menu;
     font-family: $police__titre-principal ;

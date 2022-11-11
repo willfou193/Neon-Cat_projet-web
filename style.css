@@ -92,22 +92,24 @@ ANIMATION
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
-main {
-  display: flex;
-}
-
 .accueil {
-  width: 100%;
-  height: calc(100vh - 200px);
+  width: 92%;
+  margin: 0 auto;
+  height: calc(100vh - 300px);
+  display: flex;
+  justify-content: space-between;
 }
 
-.accueil #videoAcc {
+.accueil .menuSide {
+  width: 20%;
+  background-color: green;
+}
+
+.accueil #videoAcc_Contenant {
   opacity: 0.5;
-}
-
-.accueil .logo {
-  position: absolute;
-  z-index: 5;
+  float: right;
+  width: 80%;
+  background-color: red;
 }
 
 body {
@@ -139,7 +141,8 @@ header div {
 
 .menu-burgerHome {
   margin-top: 100px;
-  width: 100vw;
+  width: 92%;
+  margin: 100px auto 0 auto;
 }
 
 .menu-burgerHome div {
@@ -147,6 +150,7 @@ header div {
 }
 
 .menu-burgerHome div ul {
+  padding: 0;
   display: flex;
   justify-content: space-around;
 }
@@ -248,12 +252,18 @@ header div {
   width: 100%;
   height: 50vh;
   margin: 0;
-  margin-top: Max(200px, 20%);
+  margin-top: Min(25vw, 30rem);
 }
 
 @media only screen and (max-width: 767px) {
   .contenant {
-    margin-top: Max(300px, 30%);
+    margin-top: Min(50vw, 60rem);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .contenant {
+    margin-top: Min(25vw, 30rem);
   }
 }
 
@@ -300,7 +310,7 @@ div.item {
   height: 100px;
   position: absolute;
   right: 1%;
-  top: 50%;
+  top: Max(calc(200px + 33,3%), calc(20%,33,3%));
   z-index: 100;
   cursor: pointer;
   background-image: url("media/images/Fleche.png");
@@ -309,17 +319,45 @@ div.item {
   transform: rotate(180deg);
 }
 
+@media only screen and (max-width: 767px) {
+  #bouton__droit {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #bouton__droit {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 #bouton__gauche {
   width: 100px;
   height: 100px;
   position: absolute;
   left: 1%;
-  top: 50%;
+  top: Max(calc(200px + 33,3%), calc(20%,33,3%));
   z-index: 100;
   cursor: pointer;
   background-image: url("media/images/Fleche.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  #bouton__gauche {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #bouton__gauche {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .nomFam {
@@ -329,13 +367,19 @@ div.item {
 div.item h2 {
   z-index: 2;
   position: relative;
-  bottom: Min(30px, 10%);
+  bottom: 4vw;
   left: 0;
   right: 0;
   margin: 0;
   text-align: center;
   color: #FFFBF6;
   font-family: kosan;
+}
+
+@media only screen and (max-width: 767px) {
+  div.item h2 {
+    font-size: 5vw;
+  }
 }
 
 div.item p:nth-of-type(1) {
@@ -353,19 +397,25 @@ div.item p:nth-of-type(1) {
   z-index: 12;
 }
 
+@media only screen and (max-width: 767px) {
+  div.item p:nth-of-type(1) {
+    font-size: 6vw;
+  }
+}
+
 div.item p:nth-of-type(2) {
   z-index: 2;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -18%;
+  bottom: Min(-22%, -8rem);
   margin-left: auto;
   margin-right: auto;
   margin: 0;
   text-align: center;
   color: grey;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.1vw;
+  font-size: Max(1.1vw, 1em);
 }
 
 div.item figure {
@@ -569,7 +619,7 @@ div.item:nth-of-type(14) {
   height: 50px;
   border-radius: 25px;
   background-color: white;
-  border: 2   px white solid;
+  border: 2px white solid;
   color: white;
   text-align: center;
   display: none;
@@ -626,7 +676,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5vw;
+  font-size: Max(2.5vw, 1em);
 }
 
 h3 {
@@ -642,7 +692,7 @@ p {
 }
 
 a {
-  font-size: 2.5em;
+  font-size: Max(2.5vw, 1.7em);
   text-decoration: none;
   color: #000000;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
