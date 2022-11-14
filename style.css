@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /**
-theme name: Sprint 2
+theme name: Sprint 3
 Author: Équipe Neon-Cat
 Author URI: https://github.com/willfou193/Neon-Cat_Projet-web
-Description: En cette fin de sprint2, l'essence du thème est démontré. La page des profs est bien entammé et le carrousel qui sera réutilisé est presque terminé.
+Description: En cette fin de sprint3, les différentes pages du sites prennent la forme finale. L'adaptation est en cours de finition et les médias sont en créations.
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: 5w5
@@ -100,28 +100,66 @@ COMPOSANTES
   justify-content: space-between;
 }
 
+@media only screen and (max-width: 767px) {
+  .accueil {
+    flex-direction: column-reverse;
+    justify-content: initial;
+    height: auto;
+  }
+}
+
 .accueil .menuSide {
   width: 17%;
 }
 
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide {
+    width: 100%;
+  }
+}
+
 .accueil .menuSide .menuCours {
-  height: 50%;
   padding-top: 20%;
 }
 
-.accueil .menuSide .menuCours ul {
-  height: 80%;
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide .menuCours {
+    padding-top: 20px;
+  }
 }
 
-.accueil .menuSide .menuCours ul li {
-  margin: 10% 0;
+.accueil .menuSide .menuCours h3 {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: culottes;
+  color: #73CD8E;
+}
+
+.accueil .menuSide .menuCours ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide .menuCours ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide .menuCours ul li {
+    margin: 0 20px;
+  }
 }
 
 .accueil .menuSide .menuCours ul li a {
   font-size: Max(1.5vw, 1.2em);
 }
 
-.accueil .menuSide #cheminement {
+.accueil .menuSide .cheminement {
   width: 60%;
   height: 60px;
   margin: 20px 0;
@@ -130,7 +168,13 @@ COMPOSANTES
   display: flex;
 }
 
-.accueil .menuSide #cheminement p {
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide .cheminement {
+    display: none;
+  }
+}
+
+.accueil .menuSide .cheminement p {
   margin: auto auto;
   align-items: center;
   text-align: center;
@@ -138,19 +182,25 @@ COMPOSANTES
   font-size: Max(0.8vw, 0.6em);
 }
 
-.accueil .menuSide #stage {
+.accueil .menuSide .stage {
   width: 70%;
   display: flex;
   flex-direction: column;
 }
 
-.accueil .menuSide #stage p {
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide .stage {
+    display: none;
+  }
+}
+
+.accueil .menuSide .stage p {
   font-size: Max(1.8vw, 1.5em);
   font-family: kosan;
   margin: 20px 0;
 }
 
-.accueil .menuSide #stage div {
+.accueil .menuSide .stage div {
   width: 100%;
   height: 30px;
   border-radius: 15px;
@@ -161,6 +211,16 @@ COMPOSANTES
   opacity: 0.5;
   float: right;
   width: 83%;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .accueil #videoAcc_Contenant {
+    width: 170%;
+    float: none;
+    margin-left: 50vw;
+    transform: translate(-50%);
+  }
 }
 
 .accueil #videoAcc_Contenant #video {
@@ -171,6 +231,7 @@ COMPOSANTES
 }
 
 .accueil #videoAcc_Contenant #video #videoAcc {
+  border-radius: 20px;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -194,6 +255,12 @@ body {
   height: 100vh;
 }
 
+@media only screen and (max-width: 767px) {
+  body {
+    overflow-y: auto;
+  }
+}
+
 header {
   display: flex;
 }
@@ -209,6 +276,11 @@ header div {
   header div {
     width: 100%;
   }
+}
+
+.headerAcc {
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-burgerHome {
@@ -300,6 +372,26 @@ header div {
 
 .menu-burger #burger__fondActif .menu-menu-1-container ul li a {
   font-variant: small-caps;
+}
+
+.cacherDesk {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .cacherDesk {
+    display: block;
+  }
+}
+
+.cacherMobile {
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .cacherMobile {
+    display: none;
+  }
 }
 
 .logo a img {
@@ -751,10 +843,6 @@ h2 {
   font-size: Max(2.5vw, 1em);
 }
 
-h3 {
-  color: white;
-}
-
 h4 {
   color: white;
 }
@@ -764,7 +852,7 @@ p {
 }
 
 a {
-  font-size: Max(2.1vw, 1.7em);
+  font-size: Max(1.7vw, 1.2em);
   text-decoration: none;
   color: #000000;
   font-family: kosan;
