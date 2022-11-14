@@ -24,8 +24,24 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header>
-		<div class="menu-burgerHome">
+    <header class="headerAcc">
+	<div class="menu-burger cacherDesk">
+			<div id="burger__fondActif">
+				<?php 
+					wp_nav_menu(
+						array(
+							"menu" => "menu_burger"
+						)
+				);
+				?>
+			</div>
+			<div id="burger__contenant">
+				<div class="burger__ligne"></div>
+				<div class="burger__ligne"></div>
+				<div class="burger__ligne"></div>
+			</div>
+		</div>
+		<div class="menu-burgerHome cacherMobile">
             <?php 
                 wp_nav_menu(
                     array(
@@ -40,6 +56,7 @@
     <section class="accueil">
 		<div class="menuSide">
 			<div class="menuCours">
+				<h3 class="cacherDesk">Les cours</h2>
 				<ul>
 					<li><a>Web</a></li>
 					<li><a>Web</a></li>
@@ -48,10 +65,10 @@
 					<li><a>Web</a></li>
 				</ul>
 			</div>
-			<div id="cheminement">
+			<div class="cheminement cacherMobile">
 				<p>Cheminement</p>
 			</div>
-			<div id="stage">
+			<div class="stage cacherMobile">
 				<p>Stage</p>
 				<div></div>
 			</div>
