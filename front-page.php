@@ -24,8 +24,24 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header>
-		<div class="menu-burgerHome">
+    <header class="headerAcc">
+	<div class="menu-burger cacherDesk">
+			<div id="burger__fondActif">
+				<?php 
+					wp_nav_menu(
+						array(
+							"menu" => "menu_burger"
+						)
+				);
+				?>
+			</div>
+			<div id="burger__contenant">
+				<div class="burger__ligne"></div>
+				<div class="burger__ligne"></div>
+				<div class="burger__ligne"></div>
+			</div>
+		</div>
+		<div class="menu-burgerHome cacherMobile">
             <?php 
                 wp_nav_menu(
                     array(
@@ -38,15 +54,34 @@
 <main>
         
     <section class="accueil">
-        <div class="logo">
-			<?php
-				if ( function_exists( 'the_custom_logo' ) ) {
-					the_custom_logo();
-				}
-			?>
+		<div class="menuSide">
+			<div class="menuCours">
+				<h3 class="cacherDesk">Les cours</h2>
+				<ul>
+					<li><a>Web</a></li>
+					<li><a>Web</a></li>
+					<li><a>Web</a></li>
+					<li><a>Web</a></li>
+					<li><a>Web</a></li>
+				</ul>
+			</div>
+			<div class="cheminement cacherMobile">
+				<p>Cheminement</p>
+			</div>
+			<div class="stage cacherMobile">
+				<p>Stage</p>
+				<div></div>
+			</div>
 		</div>
-        <iframe id="videoAcc" width="1200" height="800" src="https://www.youtube.com/embed/WGvBFuDdNzE?&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
+		<div id="videoAcc_Contenant">
+			<div id="video">
+				<iframe id="videoAcc" src="https://www.youtube.com/embed/WGvBFuDdNzE?&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			 
+			</div>
+ 			
+			 
+		</div>
+       
     </section>
    
 </main>    
