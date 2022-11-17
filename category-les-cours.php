@@ -17,6 +17,7 @@ get_header();
 
 	<main id="primary" class="site-main">
 		<?php
+		 
 		if ( have_posts() ) :?>
 			
 			<div class="contenant prof">
@@ -32,27 +33,42 @@ get_header();
                     <div class="carousel">
 						<?php
 							/* Start the Loop */
-                            
+                            $compteur = 0;
+							
 							while ( have_posts() ) :?>
-							<div class="item prof">
-							<?php
-								the_post();
-								echo the_content();?>
-								<?php 
-									wp_nav_menu(
-										array(
-											"menu" => "Menu-Cours"
-										)
-								);
+							
+								<?php $permaLien = substr(get_the_permalink(),0,strrpos(get_the_permalink(), '/',-2));
+										$permaLien .= "/category";
+										$permaLien .= substr(get_the_permalink(),strrpos(get_the_permalink(), '/',-2));
 								?>
-							</div>
-								<?php
+								<div class="item prof">
+									<a href="<?= $permaLien;?>" class="permalink"></a>
+									
+ 									
+										<?php
+										the_post();
+										echo the_content();
+										
+										//$permaLien = substr($chaine,0,strrpos($chaine, '/',-2)) + $category + substr($chaine,strrpos($chaine, '/',-2));
+										//echo strrpos($chaine, '/',-2);
+										//echo '-----------';
+										//echo strlen($chaine);
+										//echo substr($chaine,0,strrpos($chaine, '/',-2));
+										//echo '-----------';
+										//echo substr($chaine,strrpos($chaine, '/',-2));
+										
+									//	http://localhost:81/2022-5w5/3d/
+										//echo print_r (get_the_category());
+										?>
+								</div>
+							<?php
 							endwhile;
-						endif;
-						
-						?>
+							?>
                     </div>
-                    
+
+                    <?php  
+					endif;
+					?>
                    
                     
                 </div>

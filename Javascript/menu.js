@@ -11,14 +11,12 @@ function activerDesactiverMenu(){
         for (i = 0; i < bulles.length; i++) {
             bulles[i].style.display = 'none';
         }
-        console.log("je desactive");
     } else {
         activerMenu = true;
         var i;
         for (i = 0; i < bulles.length; i++) {
             bulles[i].style.display = 'block';
         }
-        console.log("j'active");
     }
 }
 //Script du menu burger dans le header
@@ -31,11 +29,9 @@ function activerDesactiverMenuBg(){
     if(activerMenuBg == true){
         activerMenuBg = false;
         menuBgBackground.style.display = 'none';
-        console.log("je desactive");
     } else {
         activerMenuBg = true;
         menuBgBackground.style.display = 'block';
-        console.log("j'active");
     }
 }
 
@@ -43,13 +39,14 @@ function activerDesactiverMenuBg(){
 var boutonDroit = document.getElementById("bouton__droit");
 var boutonGauche = document.getElementById("bouton__gauche");
 var boutonRadio = document.getElementsByClassName("inputProf");
-var itemProf = document.getElementsByClassName("item prof");
+const itemProf = document.getElementsByClassName("item prof");
 let index = 2;
 let indexPre = 1;
 let indexPost = 3;
 var viewPortMax = window.matchMedia("(max-wdith: 767px)");
 boutonDroit.addEventListener("click", carrouselPlus)
 boutonGauche.addEventListener("click", carrouselMinus)
+// ----------------------------------------------------------------------------------------
 function carrouselMinus(){
     if(index <= 1){
         index = boutonRadio.length+1;
@@ -67,14 +64,23 @@ function carrouselMinus(){
     
     if (window.innerWidth < 767) {
         Array.from(document.getElementsByClassName("item prof"), e => e.style.transform = "translateX(calc(-90vw * var(--r)))scale(0.6)");
+        for(i = 0; i < index.length; i++){
+            console.log(i);
+        }
         itemProf[index-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(1)";
     }
     if(window.innerWidth > 767){
-        Array.from(document.getElementsByClassName("item prof"), e => e.style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)");  
+        Array.from(document.getElementsByClassName("item prof"), e => e.style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)");
+        for(i = 0; i < index.length; i++){
+            console.log(i);
+            //var paragraph = itemProf[i].getElementsByTagName('p')[1].style.display = "none";
+            //console.log(paragraph);
+        }
         itemProf[index-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(1)";
     }
     
 }
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function carrouselPlus(){
     if(index >= boutonRadio.length){
         index = 0;
@@ -89,10 +95,7 @@ function carrouselPlus(){
     index += 1;
     indexPre += 1;
     indexPost += 1;
-    console.log(itemProf);
     boutonRadio[index-1].checked = true
-    console.log(itemProf[indexPre-1])
-    console.log(itemProf[indexPost-1])
     if (window.innerWidth < 767) {
         console.log("plus bas");
         Array.from(document.getElementsByClassName("item prof"), e => e.style.transform = "translateX(calc(-90vw * var(--r)))scale(0.6)");  
