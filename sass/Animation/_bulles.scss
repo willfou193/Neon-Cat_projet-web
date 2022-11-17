@@ -49,3 +49,23 @@
         left: 265px;
     }
 }
+
+.footer__bulle:nth-child(1) { 
+    animation : bulle1 .5s 0s forwards; 
+}
+
+.footer__bulle:nth-child(2) { 
+    animation : bulle2 0.7s 0s forwards;
+}
+
+.footer__bulle:nth-child(3) { 
+    animation : bulle3 0.3s 0s forwards;
+}
+
+.footer__bulle:nth-child(4) { 
+    animation : bulle4 0.9s 0s forwards;
+}
+
+.footer__bulle:nth-child(5) { 
+    animation : bulle5 .4s 0s forwards;
+}
