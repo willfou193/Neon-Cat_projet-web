@@ -28,38 +28,23 @@ get_header();
                     <input class="inputProf" type="radio" name="position" />
                     <input class="inputProf" type="radio" name="position" />
                     <input class="inputProf" type="radio" name="position" />
-                    <input class="inputProf" type="radio" name="position" />
-                 
                     <div class="carousel">
 						<?php
-							/* Start the Loop */
-                            $compteur = 0;
-							
 							while ( have_posts() ) :?>
 							
-								<?php $permaLien = substr(get_the_permalink(),0,strrpos(get_the_permalink(), '/',-2));
-										$permaLien .= "/category";
-										$permaLien .= substr(get_the_permalink(),strrpos(get_the_permalink(), '/',-2));
-								?>
 								<div class="item prof">
-									<a href="<?= $permaLien;?>" class="permalink"></a>
-									
- 									
-										<?php
+                                    <h2><?php
+                                        the_title();
+									?></h2>
+                                    <div class="contenuCours">
+                                        <?php
 										the_post();
 										echo the_content();
-										
-										//$permaLien = substr($chaine,0,strrpos($chaine, '/',-2)) + $category + substr($chaine,strrpos($chaine, '/',-2));
-										//echo strrpos($chaine, '/',-2);
-										//echo '-----------';
-										//echo strlen($chaine);
-										//echo substr($chaine,0,strrpos($chaine, '/',-2));
-										//echo '-----------';
-										//echo substr($chaine,strrpos($chaine, '/',-2));
-										
-									//	http://localhost:81/2022-5w5/3d/
-										//echo print_r (get_the_category());
+									
 										?>
+                                    </div>
+                                        
+										
 								</div>
 							<?php
 							endwhile;

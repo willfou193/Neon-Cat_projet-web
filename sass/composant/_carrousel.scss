@@ -46,8 +46,8 @@
       transform: translateX(calc(-100vw * var(--r)))scale(0.6); //300px de base
       width: 80%;
       padding-bottom: Min(80%, 700px);
-  }
-
+    }
+    
     //transform: rotateY(calc(-8deg * var(--r))) translateX(calc(-350px * var(--r))); //300px de base
   }
   #bouton__droit{
@@ -94,7 +94,16 @@
   .nomFam{
     font-family: neon;
   }
-  div.item h2{
+  .permalink{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+  }
+  .contenuCours p{
+    font-size: 10px;
+  }
+  div.item h2{ // Titre prof ou du cours / famille de cours
     z-index: 2;
     position: relative;
     bottom: 4vw;
@@ -108,7 +117,7 @@
       font-size: 5vw;
     }
   }
-  div.item p:nth-of-type(1){
+  div.item p:nth-of-type(1){ // Les cours de ... / spécialiste du ...
     position:absolute;
     left: 0; 
     right: 0; 
@@ -118,14 +127,13 @@
     margin: 0;
     text-align: center;
     font-size: 2vw;
-    color: grey;
     font-family: $police__titre-principal;
     z-index: 12;
     @include screen('mobile')  {
       font-size: 6vw;
     }
 }
-div.item p:nth-of-type(2){
+div.item p:nth-of-type(2){ // description
     z-index: 2;
     position:absolute;
     left: 0; 
@@ -139,7 +147,7 @@ div.item p:nth-of-type(2){
     font-family: $police__titre-secondaire;
     font-size: Max(1.1vw, 1em);
 }
-  div.item figure{
+  div.item figure{ //image deuxieme plan
     position:absolute;
     left: 0; 
     right: 0; 
@@ -150,7 +158,7 @@ div.item p:nth-of-type(2){
     height: 85%;
     border-radius: 10%;
   }
-  div.item figure:nth-of-type(1){
+  div.item figure:nth-of-type(1){ //image premier plan
     z-index: 1;
     transition: .5s ease-in-out;
   }
