@@ -29,6 +29,12 @@
 			?>
 		</div>
 		<div class="menu-burger">
+			<input type="checkbox" id="chkBurger" class="chkBurger">
+			<label for="chkBurger" id="burger__contenant">
+				<div class="burger__ligne"></div>
+				<div class="burger__ligne"></div>
+				<div class="burger__ligne"></div>
+			</label>
 			<div id="burger__fondActif">
 				<?php 
 					wp_nav_menu(
@@ -38,11 +44,7 @@
 				);
 				?>
 			</div>
-			<div id="burger__contenant">
-				<div class="burger__ligne"></div>
-				<div class="burger__ligne"></div>
-				<div class="burger__ligne"></div>
-			</div>
+			
 			<h1>
 			<?php wp_title(false) ?>
 			</h1>

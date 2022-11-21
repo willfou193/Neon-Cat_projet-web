@@ -140,5 +140,31 @@ var contenantImg = document.querySelectorAll('div.img_contenent').forEach(conten
             
     })
   })
-   
-  
+
+ 
+//==================================================================================
+//Afficher boite modale des videos
+let boiteVideoAllumee = true;
+var boutonFermeVideo = document.querySelectorAll('div.boutonFerme').forEach(boutonFerme => {
+   boutonFerme.addEventListener('click', event =>  {
+       boutonFerme.parentNode.style.display = "none";
+       boutonFerme.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.display = "block";
+       Array.from(document.getElementsByClassName("boutonPlay"), e => e.style.display = "block");
+       boiteVideoAllumee = !boiteVideoAllumee;
+    })
+  })
+var boutonPlay = document.querySelectorAll('div.boutonPlay').forEach(boutonPlay => {
+    boutonPlay.addEventListener('click', event =>  {
+        boiteVideoAllumee = !boiteVideoAllumee;
+        if(boiteVideoAllumee == false){
+            boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "block";
+            boutonPlay.style.display = "none";
+            Array.from(document.getElementsByClassName("boutonPlay"), e => e.style.display = "none");
+        }else{
+            boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "none";
+            Array.from(document.getElementsByClassName("boutonPlay"), e => e.style.display = "block");
+            boutonPlay.style.display = "block";
+        }
+            
+    })
+  })

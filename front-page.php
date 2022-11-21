@@ -75,8 +75,10 @@
 		</div>
 		<div id="videoAcc_Contenant">
 			<div id="video">
-				<iframe id="videoAcc" src="https://www.youtube.com/embed/WGvBFuDdNzE?&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<!--<video id="videoAcc" autoplay>
+				<!--<iframe id="videoAcc" src="https://www.youtube.com/embed/WGvBFuDdNzE?&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				-->
+				<video src="https://i.imgur.com/lhLAny2.mp4" class="videoAcc" autoplay="" muted="" playsinline="" loop=""></video>
+					<!--<video id="videoAcc" autoplay>
 					<source src="media/videos/PageAcceuil.mp4" type="video/mp4">
 					<source src="media/videos/PageAcceuil.mp4" type="video/ogg">
 					<p>
