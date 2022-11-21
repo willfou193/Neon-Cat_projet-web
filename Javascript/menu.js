@@ -1,3 +1,4 @@
+//==================================================================================
 //Script du menu Info situé en bas à gauche de chaque pages
 var menu= document.getElementById("contenant__footer");
 var bulles = document.getElementById("contenant__footer").getElementsByClassName('footer__bulle');
@@ -19,6 +20,7 @@ function activerDesactiverMenu(){
         }
     }
 }
+//==================================================================================
 //Script du menu burger dans le header
 var menuBg= document.getElementById("burger__contenant");
 var menuBgBackground= document.getElementById("burger__fondActif");
@@ -117,3 +119,26 @@ window.onresize = function() {
         itemProf[index-1].style.transform = "translateX(calc(-31vw * var(--r)))scale(1)";
     }
 };
+
+//==================================================================================
+//Afficher boite modale des cours
+let boiteModAllumee = true;
+var boutonFerme = document.querySelectorAll('div.boutonFerme').forEach(boutonFerme => {
+    boutonFerme.addEventListener('click', event =>  {
+        boutonFerme.parentNode.style.display = "none";
+        boiteModAllumee = !boiteModAllumee;
+    })
+  })
+var contenantImg = document.querySelectorAll('div.img_contenent').forEach(contenantImg => {
+    contenantImg.addEventListener('click', event =>  {
+        boiteModAllumee = !boiteModAllumee;
+        if(boiteModAllumee == false){
+            contenantImg.nextElementSibling.style.display = "block";
+        }else{
+            contenantImg.nextElementSibling.style.display = "none";
+        }
+            
+    })
+  })
+   
+  

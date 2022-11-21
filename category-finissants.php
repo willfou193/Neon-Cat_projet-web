@@ -17,7 +17,6 @@ get_header();
 
 	<main id="primary" class="site-main">
 		<?php
-		 
 		if ( have_posts() ) :?>
 			
 			<div class="contenant prof">
@@ -30,35 +29,18 @@ get_header();
                     <div class="carousel">
 						<?php
 							while ( have_posts() ) :?>
-
-								<div class="item prof">
-                                    <h2><?php
-                                        the_title();
-									?></h2>
-									<div class="img_contenent">
-										<?php
-											the_post_thumbnail();
-										?>
-									</div>
-                                    <div class="contenuCours">
-										<div class="boutonFerme">X</div>
-                                        <?php
-										the_post();
-										echo the_content();
-									
-										?>
-                                    </div>
-                                        
-										
-								</div>
+							<div class="item prof">
 							<?php
+								the_post();
+								the_content();?>
+							</div>
+								<?php
 							endwhile;
-							?>
+						endif;
+						
+						?>
                     </div>
-
-                    <?php  
-					endif;
-					?>
+                    
                    
                     
                 </div>

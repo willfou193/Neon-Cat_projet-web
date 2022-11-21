@@ -25,8 +25,6 @@ get_header();
                 <div id="bouton__gauche"></div>
                     <input class="inputProf" type="radio" name="position" />
                     <input class="inputProf" type="radio" name="position" checked/>
-                    <input class="inputProf" type="radio" name="position" />
-                    <input class="inputProf" type="radio" name="position" />
                     <div class="carousel">
 						<?php
 							while ( have_posts() ) :?>
