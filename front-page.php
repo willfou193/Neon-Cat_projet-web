@@ -67,7 +67,8 @@
 					<li><a>Web</a></li>
 				</ul>
 			</div>
-			<div class="cheminement cacherMobile">
+			<div class="cheminement cacherMobile" link="https://www.cmaisonneuve.qc.ca/">
+				
 				<p>Cheminement</p>
 			</div>
 			<div class="stage cacherMobile">
