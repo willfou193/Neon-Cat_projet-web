@@ -20,23 +20,6 @@ function activerDesactiverMenu(){
         }
     }
 }
-//==================================================================================
-//Script du menu burger dans le header
-var menuBg= document.getElementById("burger__contenant");
-var menuBgBackground= document.getElementById("burger__fondActif");
-let activerMenuBg = false;
-
-menuBg.addEventListener("click", activerDesactiverMenuBg)
-function activerDesactiverMenuBg(){
-    if(activerMenuBg == true){
-        activerMenuBg = false;
-        menuBgBackground.style.display = 'none';
-    } else {
-        activerMenuBg = true;
-        menuBgBackground.style.display = 'block';
-    }
-}
-
 // Script bouton Avant / arrière carrousel
 var boutonDroit = document.getElementById("bouton__droit");
 var boutonGauche = document.getElementById("bouton__gauche");

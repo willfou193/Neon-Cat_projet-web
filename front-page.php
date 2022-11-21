@@ -26,6 +26,7 @@
 <body <?php body_class(); ?>>
     <header class="headerAcc">
 	<div class="menu-burger cacherDesk">
+
 			<div id="burger__fondActif">
 				<?php 
 					wp_nav_menu(
@@ -35,11 +36,12 @@
 				);
 				?>
 			</div>
-			<div id="burger__contenant">
-				<div class="burger__ligne"></div>
-				<div class="burger__ligne"></div>
-				<div class="burger__ligne"></div>
-			</div>
+			<input type="checkbox" id="chk-burger">
+            <label for="chk-burger" id="burger__contenant">
+                <div id="burger__ligne1"class="burger__ligne"></div>
+                <div id="burger__ligne2"class="burger__ligne"></div>
+                <div id="burger__ligne3" class="burger__ligne"></div>
+            </label>
 		</div>
 		<div class="menu-burgerHome cacherMobile">
             <?php 

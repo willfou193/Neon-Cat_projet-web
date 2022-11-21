@@ -29,22 +29,29 @@
 			?>
 		</div>
 		<div class="menu-burger">
-			<input type="checkbox" id="chkBurger" class="chkBurger">
-			<label for="chkBurger" id="burger__contenant">
-				<div class="burger__ligne"></div>
-				<div class="burger__ligne"></div>
-				<div class="burger__ligne"></div>
-			</label>
-			<div id="burger__fondActif">
-				<?php 
-					wp_nav_menu(
-						array(
-							"menu" => "menu_burger"
-						)
-				);
-				?>
-			</div>
-			
+
+    
+
+            
+
+            <section class="site__bare">
+            <input type="checkbox" id="chk-burger">
+            <label for="chk-burger" id="burger__contenant">
+                <div id="burger__ligne1"class="burger__ligne"></div>
+                <div id="burger__ligne2"class="burger__ligne"></div>
+                <div id="burger__ligne3" class="burger__ligne"></div>
+            </label>
+
+            <div id="burger__fondActif">
+                <?php 
+                    wp_nav_menu(
+                        array(
+                            "menu" => "menu_burger"
+                        )
+                );
+                ?>
+            </div>
+			</section>
 			<h1>
 			<?php wp_title(false) ?>
 			</h1>
