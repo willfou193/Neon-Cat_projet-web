@@ -41,7 +41,7 @@ get_header();
 										?>
 									</div>
                                     <div class="contenuCours">
-										<div class="boutonFerme">X</div>
+										<div class="boutonFerme"></div>
                                         <?php
 										the_post();
 										echo the_content();
