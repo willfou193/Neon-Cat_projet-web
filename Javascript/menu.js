@@ -20,23 +20,6 @@ function activerDesactiverMenu(){
         }
     }
 }
-//==================================================================================
-//Script du menu burger dans le header
-var menuBg= document.getElementById("burger__contenant");
-var menuBgBackground= document.getElementById("burger__fondActif");
-let activerMenuBg = false;
-
-menuBg.addEventListener("click", activerDesactiverMenuBg)
-function activerDesactiverMenuBg(){
-    if(activerMenuBg == true){
-        activerMenuBg = false;
-        menuBgBackground.style.display = 'none';
-    } else {
-        activerMenuBg = true;
-        menuBgBackground.style.display = 'block';
-    }
-}
-
 // Script bouton Avant / arrière carrousel
 var boutonDroit = document.getElementById("bouton__droit");
 var boutonGauche = document.getElementById("bouton__gauche");
@@ -140,5 +123,31 @@ var contenantImg = document.querySelectorAll('div.img_contenent').forEach(conten
             
     })
   })
-   
-  
+
+ 
+//==================================================================================
+//Afficher boite modale des videos
+let boiteVideoAllumee = true;
+var boutonFermeVideo = document.querySelectorAll('div.boutonFerme').forEach(boutonFerme => {
+   boutonFerme.addEventListener('click', event =>  {
+       boutonFerme.parentNode.style.display = "none";
+       boutonFerme.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.display = "block";
+       Array.from(document.getElementsByClassName("boutonPlay"), e => e.style.display = "block");
+       boiteVideoAllumee = !boiteVideoAllumee;
+    })
+  })
+var boutonPlay = document.querySelectorAll('div.boutonPlay').forEach(boutonPlay => {
+    boutonPlay.addEventListener('click', event =>  {
+        boiteVideoAllumee = !boiteVideoAllumee;
+        if(boiteVideoAllumee == false){
+            boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "block";
+            boutonPlay.style.display = "none";
+            Array.from(document.getElementsByClassName("boutonPlay"), e => e.style.display = "none");
+        }else{
+            boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "none";
+            Array.from(document.getElementsByClassName("boutonPlay"), e => e.style.display = "block");
+            boutonPlay.style.display = "block";
+        }
+            
+    })
+  })
