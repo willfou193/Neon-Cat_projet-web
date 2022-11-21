@@ -798,6 +798,9 @@ div.item:nth-of-type(14) {
 }
 
 .footer__bulle {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe-bold");
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
   width: 50px;
   height: 50px;

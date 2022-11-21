@@ -14,7 +14,9 @@
 	<footer>
 		<div id="contenant__footer">
 			<div id="contenant__bulles">
-				<div class="footer__bulle" href="https://www.facebook.com/groups/170302146254"></div>
+				<div class="footer__bulle" href="https://www.facebook.com/groups/170302146254">
+				<img src="media/icon/facebook_icon.svg" alt="facebook_icon">
+				</div>
 				<div class="footer__bulle" href="https://www.facebook.com/groups/170302146254"></div>
 				<div class="footer__bulle" href="https://www.facebook.com/groups/170302146254"></div>
 				<div class="footer__bulle" href="https://www.facebook.com/groups/170302146254"></div>
