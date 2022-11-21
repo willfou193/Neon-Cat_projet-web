@@ -14,6 +14,10 @@
     font-size: 2em;
     cursor: pointer;
     z-index: 100;
+    @include screen('tablet')  {
+        width: 120px;
+        height: 120px;
+    }
     @include screen('mobile')  {
         left: calc(100% - 100px);
         top: 10px;
