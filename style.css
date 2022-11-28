@@ -988,12 +988,12 @@ div.item:nth-of-type(14) {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background-color: white;
+  background-color: #1A1B1D;
   border: 2px white solid;
   color: white;
   text-align: center;
   display: none;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 @media only screen and (max-width: 767px) {
