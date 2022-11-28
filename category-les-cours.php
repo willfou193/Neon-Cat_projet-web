@@ -42,7 +42,7 @@ get_header();
 							?>
 							
 								
-								<div class="item prof">
+								<div class="item">
 									<a href="<?= $permaLien;?>" class="permalink"></a>
 										<div class="boutonPlay"></div>
 										
