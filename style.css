@@ -979,12 +979,12 @@ div.item:nth-of-type(14) {
 }
 
 .cls-1 {
-  fill: #676767;
+  fill: #A8D46C;
   stroke: #e0e0e0;
   stroke-miterlimit: 5;
   stroke-width: .3px;
-  translate: 2px;
   scale: 40%;
+  justify-content: center;
 }
 
 .footer__bulle:nth-child(1) {
