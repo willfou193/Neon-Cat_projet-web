@@ -31,7 +31,7 @@ get_header();
 						<?php
 							while ( have_posts() ) :?>
 
-								<div class="item prof">
+								<div class="item">
                                     <h2><?php
                                         the_title();
 									?></h2>

@@ -19,7 +19,7 @@ get_header();
 		<?php
 		if ( have_posts() ) :?>
 			
-			<div class="contenant prof">
+			<div class="contenant">
                 <div id="bouton__droit"></div>
                 <div id="bouton__gauche"></div>
                     <input class="inputProf" type="radio" name="position" />

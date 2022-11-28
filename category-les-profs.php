@@ -40,7 +40,7 @@ get_header();
                     <div class="carousel">
 						<?php
 							while ( have_posts() ) :?>
-							<div class="item prof">
+							<div class="item">
 							<?php
 								the_post();
 								the_content();?>
