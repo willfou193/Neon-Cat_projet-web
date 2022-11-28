@@ -17,9 +17,10 @@ get_header();
 
 	<main id="primary" class="site-main">
 		<?php
+		 
 		if ( have_posts() ) :?>
 			
-			<div class="contenant">
+			<div class="contenant prof">
                 <div id="bouton__droit"></div>
                 <div id="bouton__gauche"></div>
                     <input class="inputProf" type="radio" name="position" />
@@ -29,18 +30,35 @@ get_header();
                     <div class="carousel">
 						<?php
 							while ( have_posts() ) :?>
-							<div class="item prof">
+
+								<div class="item">
+                                    <h2><?php
+                                        the_title();
+									?></h2>
+									<div class="img_contenent">
+										<?php
+											the_post_thumbnail();
+										?>
+									</div>
+                                    <div class="contenuCours">
+										<div class="boutonFerme"></div>
+                                        <?php
+										the_post();
+										echo the_content();
+									
+										?>
+                                    </div>
+                                        
+										
+								</div>
 							<?php
-								the_post();
-								the_content();?>
-							</div>
-								<?php
 							endwhile;
-						endif;
-						
-						?>
+							?>
                     </div>
-                    
+
+                    <?php  
+					endif;
+					?>
                    
                     
                 </div>

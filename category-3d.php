@@ -18,35 +18,20 @@ get_header();
 	<main id="primary" class="site-main">
 		<?php
 		 
-		if ( have_posts() ) :
-			?>
+		if ( have_posts() ) :?>
 			
 			<div class="contenant prof">
                 <div id="bouton__droit"></div>
                 <div id="bouton__gauche"></div>
-				<?php
-					for($i = 0; $i < $wp_query->post_count; $i++ ){
-						
-						if($i != 1){
-							?><input class="inputProf" type="radio" name="position" /><?php
-						}else{
-							?><input class="inputProf" type="radio" name="position" checked/><?php
-						}
-					}
-				?>
+                    <input class="inputProf" type="radio" name="position" />
+                    <input class="inputProf" type="radio" name="position" checked/>
                     <div class="carousel">
 						<?php
-							while ( have_posts() ) : the_post();
-							
-								$leTitre = get_the_title();
-								$longueur = strlen($leTitre);
-								
-								?>
+							while ( have_posts() ) :?>
 
 								<div class="item">
                                     <h2><?php
-										the_title();
-                                        $leTitre;
+                                        the_title();
 									?></h2>
 									<div class="img_contenent">
 										<?php
@@ -56,7 +41,7 @@ get_header();
                                     <div class="contenuCours">
 										<div class="boutonFerme"></div>
                                         <?php
-										
+										the_post();
 										echo the_content();
 									
 										?>
