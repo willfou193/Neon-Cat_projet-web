@@ -1007,6 +1007,15 @@ div.item:nth-of-type(14) {
   }
 }
 
+.cls-1 {
+  fill: #676767;
+  stroke: #e0e0e0;
+  stroke-miterlimit: 5;
+  stroke-width: .3px;
+  translate: 2px;
+  scale: 40%;
+}
+
 .footer__bulle:nth-child(1) {
   bottom: 265px;
   left: 35px;
