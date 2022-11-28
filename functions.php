@@ -44,6 +44,7 @@ function underscore_setup() {
 }    
 
 add_action( 'after_setup_theme', 'underscore_setup' );
+
 //------------------------------------------------------------/ custom logo
 function themename_custom_logo_setup() {
 	$defaults = array(
