@@ -181,7 +181,6 @@ COMPOSANTES
 
 .accueil .menuSide .cheminement {
   width: 60%;
-  height: 60px;
   margin: 20px 0;
   border: #C8C8C8 solid 1px;
   border-radius: 10px;
@@ -194,12 +193,14 @@ COMPOSANTES
   }
 }
 
-.accueil .menuSide .cheminement p {
-  margin: auto auto;
-  align-items: center;
+.accueil .menuSide .cheminement a {
+  width: 100%;
+  height: 60px;
+  margin: 0;
   text-align: center;
   font-family: kosan;
   font-size: Max(0.8vw, 0.6em);
+  padding: 20px 0;
 }
 
 .accueil .menuSide .stage {
@@ -634,42 +635,36 @@ div.item .img_contenent img {
 div.item .contenuCours {
   position: fixed;
   z-index: 100;
-  width: 1500px;
-  height: 850px;
+  width: 70vw;
+  height: 40vw;
   margin-top: Min(13vw, 17rem);
   right: 50%;
   transform: translate(50%, -50%);
   display: none;
+  flex-direction: column;
   background-image: url("media/images/backgroundModale.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-size: 90%;
+  background-size: 100% 100%;
   overflow-y: auto;
 }
 
 @media only screen and (max-width: 767px) {
   div.item .contenuCours {
-    height: 70vh;
-    width: 70vw;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  div.item .contenuCours {
-    width: 700px;
-    height: 400px;
+    height: 50vh;
+    width: 90vw;
   }
 }
 
 div.item .contenuCours .boutonFerme {
-  position: absolute;
-  margin: 100px auto 40px auto;
+  margin: 120px 160px 20px 0;
   width: 50px;
   height: 50px;
   left: 50%;
   border-radius: 25px;
   text-align: center;
+  align-self: flex-end;
   font-family: culottes;
   font-size: 2.5em;
   cursor: pointer;
@@ -681,11 +676,13 @@ div.item .contenuCours .boutonFerme {
 
 div.item .contenuCours p {
   position: initial;
+  align-self: center;
   font-size: 1.5em;
   font-family: culottes;
-  padding: 30px 50px;
+  padding: 50px 0;
   letter-spacing: 0.5;
   line-height: 45px;
+  width: 70%;
 }
 
 div.item .contenuCours .video {
@@ -736,7 +733,7 @@ div.item h2 {
   }
 }
 
-div.item p:nth-of-type(1) {
+div.item .sousTitre {
   position: absolute;
   left: 0;
   right: 0;
@@ -749,10 +746,9 @@ div.item p:nth-of-type(1) {
   font-family: kosan;
   z-index: 12;
   color: white;
-  background-image: url("media/images/fondMenu.png");
-  background-image: url("media/images/titreProf3.png");
+  background-image: url("media/images/sousTitre.png");
   background-repeat: no-repeat;
-  background-size: 400px 60px;
+  background-size: 100% 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #252B29;
@@ -761,7 +757,7 @@ div.item p:nth-of-type(1) {
 }
 
 @media only screen and (max-width: 767px) {
-  div.item p:nth-of-type(1) {
+  div.item .sousTitre {
     font-size: 6vw;
   }
 }

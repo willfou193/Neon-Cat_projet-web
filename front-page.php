@@ -26,22 +26,23 @@
 <body <?php body_class(); ?>>
     <header class="headerAcc">
 	<div class="menu-burger cacherDesk">
-
-			<div id="burger__fondActif">
-				<?php 
-					wp_nav_menu(
-						array(
-							"menu" => "menu_burger"
-						)
-				);
-				?>
-			</div>
-			<input type="checkbox" id="chk-burger">
-            <label for="chk-burger" id="burger__contenant">
+		<input type="checkbox" id="chk-burger">
+		<label for="chk-burger" id="burger__contenant">
                 <div id="burger__ligne1"class="burger__ligne"></div>
                 <div id="burger__ligne2"class="burger__ligne"></div>
                 <div id="burger__ligne3" class="burger__ligne"></div>
-            </label>
+        </label>
+		<div id="burger__fondActif">
+			<?php 
+				wp_nav_menu(
+					array(
+						"menu" => "menu_burger"
+					)
+			);
+			?>
+		</div>
+			
+            
 		</div>
 		<div class="menu-burgerHome cacherMobile">
             <?php 
@@ -67,9 +68,9 @@
 					<li><a>Web</a></li>
 				</ul>
 			</div>
-			<div class="cheminement cacherMobile" link="https://www.cmaisonneuve.qc.ca/">
+			<div class="cheminement cacherMobile" link="https://www.cmaisonneuve.qc.ca/" >
 				
-				<p>Cheminement</p>
+				<a href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/#liste_des_cours_programme" target="_blank">Cheminement</a>
 			</div>
 			<div class="stage cacherMobile">
 				<p>Stage</p>

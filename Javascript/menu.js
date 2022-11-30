@@ -108,7 +108,7 @@ window.onresize = function() {
 let boiteModAllumee = true;
 var boutonFerme = document.querySelectorAll('div.boutonFerme').forEach(boutonFerme => {
     boutonFerme.addEventListener('click', event =>  {
-        boutonFerme.parentNode.style.display = "none";
+        boutonFerme.parentNode.style.display = "flex";
         boiteModAllumee = !boiteModAllumee;
     })
   })
@@ -116,7 +116,7 @@ var contenantImg = document.querySelectorAll('div.img_contenent').forEach(conten
     contenantImg.addEventListener('click', event =>  {
         boiteModAllumee = !boiteModAllumee;
         if(boiteModAllumee == false){
-            contenantImg.nextElementSibling.style.display = "block";
+            contenantImg.nextElementSibling.style.display = "flex";
         }else{
             contenantImg.nextElementSibling.style.display = "none";
         }

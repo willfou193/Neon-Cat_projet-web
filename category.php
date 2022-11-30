@@ -38,16 +38,35 @@ get_header();
 						<?php
 							while ( have_posts() ) : the_post();
 							
-								$leTitre = get_the_title();
-								$longueur = strlen($leTitre);
-								
-								?>
+									$leTitre = get_the_title();
+									$longueur = strlen($leTitre);
+									$court = 45;
+									$moyen = 60;
+									$long = 75;
+								?>	
 
 								<div class="item">
-                                    <h2><?php
-										the_title();
-                                        $leTitre;
-									?></h2>
+									<!-- Début du H2-->
+                                    <h2 class="<?php if($longueur < $court){
+										?>
+										courtTitre
+										<?php
+									}else if($longueur < $moyen && $longueur > $court){
+										?>
+										moyenTitre
+										<?php
+									}else if($longueur < $long && $longueur > $moyen){
+										?>
+										longTitre
+										<?php
+										}?>">
+
+
+										<?php
+											echo $leTitre;
+										?>
+									</h2>
+									<!-- Fin du H2-->
 									<div class="img_contenent">
 										<?php
 											the_post_thumbnail();
