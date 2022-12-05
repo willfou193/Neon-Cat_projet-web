@@ -1038,6 +1038,20 @@ div.item:nth-of-type(14) {
   left: 265px;
 }
 
+.opportunite {
+  overflow-y: scroll;
+}
+
+.titre-opportunite {
+  font-family: culottes;
+  color: #85B698;
+  justify-content: center;
+}
+
+.gallery {
+  padding: 5%;
+}
+
 /* ---------------------------------------------------------
 ÉLÉMENTS
 --------------------------------------------------------- */

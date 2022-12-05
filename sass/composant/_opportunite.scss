@@ -1,9 +1,21 @@
 .contenu-opportunite {  
-    
+    // justify-content: center;
+    // height: 10%;
+    // width: 10%;
 }
 
-  
 
-  
+.opportunite {  
+overflow-y: scroll;
+}
 
-  
+.titre-opportunite {  
+    font-family: culottes;
+    color: $couleur__marie3;
+    justify-content: center;
+}
+
+.gallery{
+    // padding-right: 5%;
+    padding: 5%;
+}

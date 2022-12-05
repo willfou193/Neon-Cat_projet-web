@@ -14,14 +14,13 @@
 
 get_header();
 ?>
-<main id="primary" class="site-main" >
+<main id="primary" class="site-main opportunite" >
+
 
     <div class="contenu-opportunite">
         <p>salut cest un test</p>
         <?php  the_content(); ?>
     </div>
-
-               
 
 
 </main>
