@@ -1,0 +1,380 @@
+.contenant {
+    width: 100%;
+    height: 50vh;
+    margin: 0;
+    margin-top:Min(25vw,30rem);
+    @include screen('mobile')  {
+      margin-top:Min(50vw,60rem);
+    }
+    @include screen('tablet')  {
+      margin-top:Min(25vw,30rem);
+    }
+    @include screen('grandEcran')  {
+      margin-top:Min(25vw,30rem);
+    }
+  }
+  
+  div.carousel {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    --items: 14;
+    --middle: 6;
+    --position: 1;
+  }
+  
+  div.item {
+    position: absolute;
+    max-width: 500px;
+    width: 35%;
+    height: 0;
+    padding-bottom: Min(33%, 500px);
+    
+    --r: calc(var(--position) - var(--offset)); //1 - la position des carte
+    --abs: max(calc(var(--r) * -1), var(--r)); // 0 ou -1 ou -2... donc 0 1 ou 2
+    transition: all 0.25s linear;
+    transform: translateX(calc(-31vw * var(--r)))scale(0.6); //300px de base
+    border: 2px solid white;
+    margin: 0 100px;
+    border-radius: 10%;
+    background-image: url('media/images/backgroundItem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include screen('mobile')  {
+      transform: translateX(calc(-100vw * var(--r)))scale(0.6); //300px de base
+      width: 80%;
+      padding-bottom: Min(80%, 700px);
+    }
+    @include screen('grandEcran')  {
+      max-width: 700px;
+      padding-bottom: Min(35%, 700px);
+    }
+    
+  }
+  #bouton__droit{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 1%;
+    top: Max(calc(200px + 33,3%),calc(20%,33,3%));
+    z-index: 90;
+    cursor: pointer;
+    background-image: url('media/images/Fleche.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+    @include screen('mobile')  {
+      width: 80px;
+      height: 80px;
+    }
+    @include screen('tablet')  {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  #bouton__gauche{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 1%;
+    top: Max(calc(200px + 33,3%),calc(20%,33,3%));
+    z-index: 90;
+    cursor: pointer;
+    background-image: url('media/images/Fleche.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include screen('mobile')  {
+      width: 80px;
+      height: 80px;
+    }
+    @include screen('tablet')  {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .nomFam{
+    font-family: neon;
+  }
+  .permalink{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+  }
+  div.item .img_contenent{// post thumbnail
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    cursor: pointer;
+    z-index: -10;
+    & img{
+      width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    opacity:0.7;
+    }
+  }
+  div.item .contenuCours{
+    position: fixed;
+    z-index: 100;
+    width: 70vw;
+    height: 40vw;
+    margin-top:Min(13vw,17rem);
+    right: 50%;
+    transform: translate(50%, -50%);
+    display: none;
+    flex-direction: column;
+    background-image: url('media/images/backgroundModale.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-size: 100% 100%;
+    overflow-y:auto;
+    @include screen('mobile')  {
+      height: 50vh;
+      width: 90vw;
+    }
+    & .boutonFerme{
+      margin: 120px 160px 20px 0;
+      width: 150px;
+      height: 150px;
+      left: 50%;
+      text-align: center;
+      align-self: flex-end;
+      font-family: culottes;
+      font-size: 2.5em;
+      cursor: pointer;
+      z-index: 130;
+      background-image: url('media/images/boutFerme.png');
+      background-repeat: no-repeat;
+      background-size:contain;
+    }
+    & p{
+      position: initial;
+      align-self: center;
+      font-size: 1.5em ;
+      font-family: culottes;
+      padding: 50px 0;
+      letter-spacing: 0.5;
+      line-height: 45px;
+      width: 70%;
+    }
+    & .video{//video dans la boite modale
+      position: absolute;
+      right: 50%;
+      transform: translate(50%, -50%);
+      top: 50%;
+      z-index: 120;
+      width: 80%;
+      height: auto;
+      opacity: 0.7;
+    }
+  }
+  .boutonPlay{
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -50%);
+    top: 20%;
+    width: 100px;
+    padding-bottom: 100px;
+    border-radius: 50px;
+    z-index: 110;
+    cursor: pointer;
+    background-image: url("media/icon/boutPlay.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &:hover{
+      background-color: $couleur__bouton;
+    }
+    
+  }
+  div.item h2{ // Titre prof ou du cours / famille de cours
+    z-index: 2;
+    position: relative;
+    bottom: 4vw;
+    left: 0; 
+    right: 0;
+    margin: 0;
+    text-align: center;
+    color: $couleur__font-titre;
+    font-family:kosan ;
+    @include screen('mobile')  {
+      font-size: 5vw;
+    }
+  }
+  
+  div.item { // Les cours de ... / spécialiste du ...
+      & .sousTitre{
+        position:absolute;
+        left: 0; 
+        right: 0; 
+        bottom: 8%;
+        margin-left: auto; 
+        margin-right: auto; 
+        margin: 0;
+        text-align: center;
+        font-size: 2vw;
+        font-family: kosan;
+        z-index: 12;
+        color: white;
+        //background-image: url("media/images/fondMenu.png");
+        background-image: url("media/images/sousTitre.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #252B29;
+        opacity: 0.7;
+        text-shadow: rgba(255, 255, 255, 0.541) 0px 0px 2px, rgba(255, 255, 255, 0.596) 0px 0px 2px, black 0px 0px 5px, black 0px 0px 15px;
+        @include screen('mobile')  {
+          font-size: 6vw;
+        }
+      }
+}
+div.item p:nth-of-type(2){ // description
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: Min(-22%, -8rem);
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0;
+  text-align: center;
+  font-family: $police__titre-secondaire;
+  font-size: Max(1.1vw, 1em);
+  
+  color: #ADC9B3;
+}
+  div.item figure{ //image deuxieme plan
+    position:absolute;
+    left: 0; 
+    right: 0; 
+    bottom: 0px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 85%;
+    height: 85%;
+    border-radius: 10%;
+  }
+  div.item figure:nth-of-type(1){ //image premier plan
+    z-index: 1;
+    transition: .5s ease-in-out;
+  }
+  div.item figure:nth-of-type(1):hover{
+    transition: .5s ease-in-out;
+    opacity: 0;
+  }
+  //Les boutons input
+  input{
+    display: none;
+  }
+  input:nth-of-type(1):checked ~ div.carousel {
+    --position: 1;
+  }
+  
+  input:nth-of-type(2):checked ~ div.carousel {
+    --position: 2;
+
+  }
+  
+  input:nth-of-type(3):checked ~ div.carousel {
+    --position:3;
+  }
+  
+  input:nth-of-type(4):checked ~ div.carousel {
+    --position: 4;
+  }
+ 
+  input:nth-of-type(5):checked ~ div.carousel {
+    --position: 5;
+  }
+
+  input:nth-of-type(6):checked ~ div.carousel {
+    --position: 6;
+  }
+  
+  input:nth-of-type(7):checked ~ div.carousel {
+    --position: 7;
+  }
+  
+  input:nth-of-type(8):checked ~ div.carousel {
+    --position: 8;
+  }
+ 
+  input:nth-of-type(9):checked ~ div.carousel {
+    --position: 9;
+  }
+  
+  input:nth-of-type(10):checked ~ div.carousel {
+    --position: 10;
+  }
+ 
+  input:nth-of-type(11):checked ~ div.carousel {
+    --position: 11;
+  }
+  
+  input:nth-of-type(12):checked ~ div.carousel {
+    --position: 12;
+  }
+  
+  input:nth-of-type(13):checked ~ div.carousel {
+    --position: 13;
+  }
+ 
+  input:nth-of-type(14):checked ~ div.carousel {
+    --position: 14;
+  }
+   // les cartes de chacun des profs
+   div.item:nth-of-type(1) {
+    --offset: 1;
+    @include screen('mobile')  {
+      transform: translateX(calc(-100vw * var(--r)))scale(0.6); //300px de base
+  }
+  }
+  div.item:nth-of-type(2) {
+    --offset: 2;
+    transform:translateX(calc(-31vw * var(--r)))scale(1);
+  }
+  div.item:nth-of-type(3) {
+    --offset: 3;
+    @include screen('mobile')  {
+      transform: translateX(calc(-100vw * var(--r)))scale(0.6); //300px de base
+  }
+  }
+  div.item:nth-of-type(4) {
+    --offset: 4;
+  }
+  div.item:nth-of-type(5) {
+    --offset: 5;
+  }
+  div.item:nth-of-type(6) {
+    --offset: 6;
+  }
+  div.item:nth-of-type(7) {
+    --offset: 7;
+  }
+  div.item:nth-of-type(8) {
+    --offset: 8;
+  }
+  div.item:nth-of-type(9) {
+    --offset: 9;
+  }
+  div.item:nth-of-type(10) {
+    --offset: 10;
+  }
+  div.item:nth-of-type(11) {
+    --offset: 11;
+  }
+  div.item:nth-of-type(12) {
+    --offset: 12;
+  }
+  div.item:nth-of-type(13) {
+    --offset: 13;
+  }
+  div.item:nth-of-type(14) {
+    --offset: 14;
+  }

@@ -1,0 +1,51 @@
+/**
+theme name: Sprint 3
+Author: Équipe Neon-Cat
+Author URI: https://github.com/willfou193/Neon-Cat_Projet-web
+Description: En cette fin de sprint3, les différentes pages du sites prennent la forme finale. L'adaptation est en cours de finition et les médias sont en créations.
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: 5w5
+*/
+
+/* ---------------------------------------------------------
+VARIABLES
+--------------------------------------------------------- */
+@import "variables/mixins";
+@import "variables/couleurs";
+@import "variables/polices";
+@import "variables/structure";
+
+/* ---------------------------------------------------------
+ANIMATION
+--------------------------------------------------------- */
+@import "Animation/bulles";
+
+/* ---------------------------------------------------------
+COMPOSANTES
+--------------------------------------------------------- */
+@import "composant/accueil";
+@import "composant/header";
+@import "composant/navigation";
+@import "composant/carrousel";
+@import "composant/footer";
+@import "composant/opportunite";
+
+
+/* ---------------------------------------------------------
+ÉLÉMENTS
+--------------------------------------------------------- */
+@import "element/balise";
+
+
+/* ---------------------------------------------------------
+INITIALISATION
+--------------------------------------------------------- */
+@import "initialisation/normalize";
+@import "initialisation/box-sizing";
+
+
+
+
+
+

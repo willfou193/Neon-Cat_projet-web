@@ -1,0 +1,16 @@
+.logo{
+    & a{
+        & img{
+            margin-left: 10px;
+            @include screen('tablet')  {
+                width: 300px;
+                height: auto;
+            }
+            @include screen('mobile')  {
+                width: 190px;
+                height: auto;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,71 @@
+//Animatinos des bulles du menu info
+@keyframes bulle1 {
+    from {
+        bottom: 35px;
+        left: 35px;
+    }
+    to{
+        bottom: 265px;
+        left: 35px;
+    }
+}
+@keyframes bulle2 {
+    from {
+        bottom: 35px;
+        left: 35px;
+    }
+    to{
+        bottom: 240px;
+    left: 120px;
+    }
+}
+@keyframes bulle3 {
+    from {
+        bottom: 35px;
+        left: 35px;
+    }
+    to{
+        bottom: 190px;
+        left: 190px;
+    }
+}
+@keyframes bulle4 {
+    from {
+        bottom: 35px;
+        left: 35px;
+    }
+    to{
+        bottom: 120px;
+        left: 240px;
+    }
+}
+@keyframes bulle5 {
+    from {
+        bottom: 35px;
+        left: 35px;
+    }
+    to{
+        bottom: 35px;
+        left: 265px;
+    }
+}
+
+.footer__bulle:nth-child(1) { 
+    animation : bulle1 .5s 0s forwards; 
+}
+
+.footer__bulle:nth-child(2) { 
+    animation : bulle2 0.7s 0s forwards;
+}
+
+.footer__bulle:nth-child(3) { 
+    animation : bulle3 0.3s 0s forwards;
+}
+
+.footer__bulle:nth-child(4) { 
+    animation : bulle4 0.9s 0s forwards;
+}
+
+.footer__bulle:nth-child(5) { 
+    animation : bulle5 .4s 0s forwards;
+}
