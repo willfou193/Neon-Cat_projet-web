@@ -61,16 +61,18 @@
 			<div class="menuCours">
 				<h3 class="cacherDesk">Les cours</h2>
 				<ul>
+					<li><a>Jeux</a></li>
 					<li><a>Web</a></li>
-					<li><a>Web</a></li>
-					<li><a>Web</a></li>
-					<li><a>Web</a></li>
-					<li><a>Web</a></li>
+					<li><a>Design</a></li>
+					<li><a>3D</a></li>
+					<li><a>Vidéo</a></li>
 				</ul>
 			</div>
+
 			<div class="cheminement cacherMobile" link="https://www.cmaisonneuve.qc.ca/" >
 				
 				<a href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/#liste_des_cours_programme" target="_blank">Cheminement</a>
+
 			</div>
 			<div class="stage cacherMobile">
 				<p>Stage</p>

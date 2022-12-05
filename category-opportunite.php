@@ -15,33 +15,25 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-		<?php
-		if ( have_posts() ) : 	the_post();?>
-			
-			
+<main id="primary" class="site-main" >
 
+    
 
-
-
-
-
-
-
-
-
-        <?php
-        endif;?>
-                    </div>
-                    
-                   
-                    
+        <div class="grid-container">
+            <div class="lesOpportunites"></div>
+                <div class="opportunite3">
+                    <img src="media/images/R.jpg" alt="uqat">
                 </div>
-			
-			
+                <div class="opportunite2"></div>
+                <div class="opportunite1"></div>
+        </div>
 
-	</main><!-- #main -->
+               
+
+
+</main>
 
 <?php
-//get_sidebar();
-get_footer();
+    get_footer();
+?>
+

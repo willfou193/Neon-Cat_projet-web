@@ -979,14 +979,11 @@ div.item:nth-of-type(14) {
 }
 
 .footer__bulle {
-  background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe-bold");
-  background-repeat: no-repeat;
-  background-position: center;
   position: absolute;
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background-color: white;
+  background-color: #1A1B1D;
   border: 2px white solid;
   color: white;
   text-align: center;
@@ -1003,12 +1000,12 @@ div.item:nth-of-type(14) {
 }
 
 .cls-1 {
-  fill: #676767;
+  fill: #A8D46C;
   stroke: #e0e0e0;
   stroke-miterlimit: 5;
   stroke-width: .3px;
-  translate: 2px;
   scale: 40%;
+  justify-content: center;
 }
 
 .footer__bulle:nth-child(1) {
@@ -1034,6 +1031,30 @@ div.item:nth-of-type(14) {
 .footer__bulle:nth-child(5) {
   bottom: 35px;
   left: 265px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.4fr 0.6fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px 5px;
+  grid-auto-flow: row;
+}
+
+.lesOpportunites {
+  grid-area: 1 / 1 / 6 / 5;
+}
+
+.opportunite1 {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.opportunite2 {
+  grid-area: 3 / 2 / 4 / 4;
+}
+
+.opportunite3 {
+  grid-area: 4 / 2 / 5 / 4;
 }
 
 /* ---------------------------------------------------------
