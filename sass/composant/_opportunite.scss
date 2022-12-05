@@ -1,26 +1,7 @@
-.grid-container {  
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.4fr 0.6fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 5px 5px;
-    grid-auto-flow: row;
-}
-  
-.lesOpportunites { 
-    grid-area: 1 / 1 / 6 / 5; 
+.contenu-opportunite {  
+    
 }
 
-.opportunite1 { 
-    grid-area: 2 / 2 / 3 / 4; 
-} 
-
-.opportunite2 { 
-    grid-area: 3 / 2 / 4 / 4; 
-}
-
-.opportunite3 { 
-    grid-area: 4 / 2 / 5 / 4; 
-}
   
 
   

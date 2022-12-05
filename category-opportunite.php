@@ -16,16 +16,10 @@ get_header();
 ?>
 <main id="primary" class="site-main" >
 
-    
-
-        <div class="grid-container">
-            <div class="lesOpportunites"></div>
-                <div class="opportunite3">
-                    <img src="media/images/R.jpg" alt="uqat">
-                </div>
-                <div class="opportunite2"></div>
-                <div class="opportunite1"></div>
-        </div>
+    <div class="contenu-opportunite">
+        <p>salut cest un test</p>
+        <?php  the_content(); ?>
+    </div>
 
                
 
