@@ -139,10 +139,9 @@
     }
     & .boutonFerme{
       margin: 120px 160px 20px 0;
-      width: 50px;
-      height: 50px;
+      width: 150px;
+      height: 150px;
       left: 50%;
-      border-radius: 25px;
       text-align: center;
       align-self: flex-end;
       font-family: culottes;
@@ -151,7 +150,7 @@
       z-index: 130;
       background-image: url('media/images/boutFerme.png');
       background-repeat: no-repeat;
-      background-size:cover;
+      background-size:contain;
     }
     & p{
       position: initial;
@@ -283,7 +282,7 @@ div.item p:nth-of-type(2){ // description
   }
   
   input:nth-of-type(3):checked ~ div.carousel {
-    --position: 3;
+    --position:3;
   }
   
   input:nth-of-type(4):checked ~ div.carousel {

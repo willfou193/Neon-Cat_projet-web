@@ -127,24 +127,29 @@ var contenantImg = document.querySelectorAll('div.img_contenent').forEach(conten
 //Afficher boite modale des videos
 let boiteVideoAllumee = true;
 var boutonFermeVideo = document.querySelectorAll('div.boutonFerme').forEach(boutonFerme => {
-   boutonFerme.addEventListener('click', event =>  {
-       boutonFerme.parentNode.style.display = "none";
-       boutonFerme.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.display = "block";
-       Array.from(document.getElementsByClassName("boutonPlay"), e => e.style.display = "block");
-       boiteVideoAllumee = !boiteVideoAllumee;
+    boutonFerme.addEventListener('click', event =>  {
+        boiteVideoAllumee = !boiteVideoAllumee;
+        boutonFerme.parentNode.style.display = "none";
+        boutonFerme.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.display = "block";
+        Array.from(document.getElementsByClassName("boutonPlay"), e => e.parentNode.style.display = "block"); //affiche toute les div.item
+        boutonPlay.style.display = "block";
     })
   })
+//var root = document.querySelector('div.item');
+//var offset = getComputedStyle(root).getPropertyValue('--offset');
 var boutonPlay = document.querySelectorAll('div.boutonPlay').forEach(boutonPlay => {
     boutonPlay.addEventListener('click', event =>  {
         boiteVideoAllumee = !boiteVideoAllumee;
         if(boiteVideoAllumee == false){
-            boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "block";
-            boutonPlay.style.display = "none";
-            Array.from(document.getElementsByClassName("boutonPlay"), e => e.style.display = "none");
+            boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "block"; //affiche la boite
+            Array.from(document.getElementsByClassName("boutonPlay"), e => e.parentNode.style.display = "none"); // On cache toutes les div.item
+            boutonPlay.parentNode.style.display = "block"; // on affiche seulement le div.item courant
+            boutonPlay.style.display = "none"; // cache le bouton
         }else{
-            boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "none";
-            Array.from(document.getElementsByClassName("boutonPlay"), e => e.style.display = "block");
+            boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "none"; // cache la boite
+            Array.from(document.getElementsByClassName("boutonPlay"), e => e.parentNode.style.display = "block"); //affiche toute les div.item
             boutonPlay.style.display = "block";
+           
         }
             
     })
