@@ -9,6 +9,16 @@
         left: 35px;
     }
 }
+@keyframes bulle6 {
+    from {
+        top: 0px;
+        right:  0px;
+    }
+    to{
+        top: 20vh;
+        right:  0px;
+    } 
+}
 @keyframes bulle2 {
     from {
         bottom: 35px;
@@ -16,8 +26,18 @@
     }
     to{
         bottom: 240px;
-    left: 120px;
+        left: 120px;
     }
+}
+@keyframes bulle7 {
+    from {
+        top: 0px;
+        right:  0px;
+    }
+    to{
+        top: 30vh;
+        right:  0px;
+    } 
 }
 @keyframes bulle3 {
     from {
@@ -29,6 +49,16 @@
         left: 190px;
     }
 }
+@keyframes bulle8 {
+    from {
+        top: 0px;
+        right:  0px;
+    }
+    to{
+        top: 40vh;
+        right:  0px;
+    } 
+}
 @keyframes bulle4 {
     from {
         bottom: 35px;
@@ -38,6 +68,16 @@
         bottom: 120px;
         left: 240px;
     }
+}
+@keyframes bulle9 {
+    from {
+        top: 0px;
+        right:  0px;
+    }
+    to{
+        top: 50vh;
+        right:  0px;
+    } 
 }
 @keyframes bulle5 {
     from {
@@ -49,23 +89,54 @@
         left: 265px;
     }
 }
-
+@keyframes bulle10 {
+    from {
+        top: 0px;
+        right:  0px;
+    }
+    to{
+        top: 60vh;
+        right:  0px;
+    } 
+}
+@keyframes menutext {
+    from {
+       transform:  scale(0);
+    }
+    to{
+        transform:  scale(1);
+    } 
+}
+.contenuCours{
+    animation: menutext1 0.5s 0s forwards;
+}
 .footer__bulle:nth-child(1) { 
     animation : bulle1 .5s 0s forwards; 
+    @include screen('mobile')  {
+        animation: bulle6 .5s 0s forwards; ;
+      }
 }
-
 .footer__bulle:nth-child(2) { 
     animation : bulle2 0.7s 0s forwards;
+    @include screen('mobile')  {
+        animation: bulle7 .5s 0s forwards; ;
+    }
 }
-
 .footer__bulle:nth-child(3) { 
     animation : bulle3 0.3s 0s forwards;
+    @include screen('mobile')  {
+        animation: bulle8 .5s 0s forwards; ;
+      }
 }
-
 .footer__bulle:nth-child(4) { 
     animation : bulle4 0.9s 0s forwards;
+    @include screen('mobile')  {
+        animation: bulle9 .5s 0s forwards; ;
+      }
 }
-
 .footer__bulle:nth-child(5) { 
     animation : bulle5 .4s 0s forwards;
+      @include screen('mobile')  {
+        animation: bulle10 .5s 0s forwards; ;
+    }
 }

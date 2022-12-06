@@ -108,7 +108,8 @@ window.onresize = function() {
 let boiteModAllumee = true;
 var boutonFerme = document.querySelectorAll('div.boutonFerme').forEach(boutonFerme => {
     boutonFerme.addEventListener('click', event =>  {
-        boutonFerme.parentNode.style.display = "flex";
+        Array.from(document.getElementsByClassName("img_contenent"), e => e.parentNode.style.display = "block"); //effacer toute les div.item
+        contenantImg.nextElementSibling.style.display = "none";
         boiteModAllumee = !boiteModAllumee;
     })
   })
@@ -116,8 +117,12 @@ var contenantImg = document.querySelectorAll('div.img_contenent').forEach(conten
     contenantImg.addEventListener('click', event =>  {
         boiteModAllumee = !boiteModAllumee;
         if(boiteModAllumee == false){
+            Array.from(document.getElementsByClassName("img_contenent"), e => e.parentNode.style.display = "none"); //effacer toute les div.item
+            contenantImg.parentNode.style.display = "block";
             contenantImg.nextElementSibling.style.display = "flex";
+           
         }else{
+            Array.from(document.getElementsByClassName("img_contenent"), e => e.parentNode.style.display = "block"); //effacer toute les div.item
             contenantImg.nextElementSibling.style.display = "none";
         }
             
@@ -126,11 +131,11 @@ var contenantImg = document.querySelectorAll('div.img_contenent').forEach(conten
 //==================================================================================
 //Afficher boite modale des videos
 let boiteVideoAllumee = true;
-var boutonFermeVideo = document.querySelectorAll('div.boutonFerme').forEach(boutonFerme => {
-    boutonFerme.addEventListener('click', event =>  {
+var boutonFermeVideo = document.querySelectorAll('div.boutonFerme').forEach(boutonFermeVideo => {
+    boutonFermeVideo.addEventListener('click', event =>  {
         boiteVideoAllumee = !boiteVideoAllumee;
-        boutonFerme.parentNode.style.display = "none";
-        boutonFerme.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.display = "block";
+        boutonFermeVideo.parentNode.style.display = "none";
+        boutonFermeVideo.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.display = "block";
         Array.from(document.getElementsByClassName("boutonPlay"), e => e.parentNode.style.display = "block"); //affiche toute les div.item
         boutonPlay.style.display = "block";
     })
@@ -141,7 +146,7 @@ var boutonPlay = document.querySelectorAll('div.boutonPlay').forEach(boutonPlay 
     boutonPlay.addEventListener('click', event =>  {
         boiteVideoAllumee = !boiteVideoAllumee;
         if(boiteVideoAllumee == false){
-            boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "block"; //affiche la boite
+            boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "flex"; //affiche la boite
             Array.from(document.getElementsByClassName("boutonPlay"), e => e.parentNode.style.display = "none"); // On cache toutes les div.item
             boutonPlay.parentNode.style.display = "block"; // on affiche seulement le div.item courant
             boutonPlay.style.display = "none"; // cache le bouton

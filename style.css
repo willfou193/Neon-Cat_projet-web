@@ -45,6 +45,17 @@ ANIMATION
   }
 }
 
+@keyframes bulle6 {
+  from {
+    top: 0px;
+    right: 0px;
+  }
+  to {
+    top: 20vh;
+    right: 0px;
+  }
+}
+
 @keyframes bulle2 {
   from {
     bottom: 35px;
@@ -53,6 +64,17 @@ ANIMATION
   to {
     bottom: 240px;
     left: 120px;
+  }
+}
+
+@keyframes bulle7 {
+  from {
+    top: 0px;
+    right: 0px;
+  }
+  to {
+    top: 30vh;
+    right: 0px;
   }
 }
 
@@ -67,6 +89,17 @@ ANIMATION
   }
 }
 
+@keyframes bulle8 {
+  from {
+    top: 0px;
+    right: 0px;
+  }
+  to {
+    top: 40vh;
+    right: 0px;
+  }
+}
+
 @keyframes bulle4 {
   from {
     bottom: 35px;
@@ -75,6 +108,17 @@ ANIMATION
   to {
     bottom: 120px;
     left: 240px;
+  }
+}
+
+@keyframes bulle9 {
+  from {
+    top: 0px;
+    right: 0px;
+  }
+  to {
+    top: 50vh;
+    right: 0px;
   }
 }
 
@@ -89,24 +133,78 @@ ANIMATION
   }
 }
 
+@keyframes bulle10 {
+  from {
+    top: 0px;
+    right: 0px;
+  }
+  to {
+    top: 60vh;
+    right: 0px;
+  }
+}
+
+@keyframes menutext {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.contenuCours {
+  animation: menutext1 0.5s 0s forwards;
+}
+
 .footer__bulle:nth-child(1) {
   animation: bulle1 .5s 0s forwards;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer__bulle:nth-child(1) {
+    animation: bulle6 .5s 0s forwards;
+  }
 }
 
 .footer__bulle:nth-child(2) {
   animation: bulle2 0.7s 0s forwards;
 }
 
+@media only screen and (max-width: 767px) {
+  .footer__bulle:nth-child(2) {
+    animation: bulle7 .5s 0s forwards;
+  }
+}
+
 .footer__bulle:nth-child(3) {
   animation: bulle3 0.3s 0s forwards;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer__bulle:nth-child(3) {
+    animation: bulle8 .5s 0s forwards;
+  }
 }
 
 .footer__bulle:nth-child(4) {
   animation: bulle4 0.9s 0s forwards;
 }
 
+@media only screen and (max-width: 767px) {
+  .footer__bulle:nth-child(4) {
+    animation: bulle9 .5s 0s forwards;
+  }
+}
+
 .footer__bulle:nth-child(5) {
   animation: bulle5 .4s 0s forwards;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer__bulle:nth-child(5) {
+    animation: bulle10 .5s 0s forwards;
+  }
 }
 
 /* ---------------------------------------------------------
@@ -229,7 +327,7 @@ COMPOSANTES
 }
 
 .accueil #videoAcc_Contenant {
-  opacity: 0.5;
+  opacity: 1;
   float: right;
   width: 83%;
   margin-top: 20px;
@@ -635,14 +733,16 @@ div.item .img_contenent img {
 div.item .contenuCours {
   position: fixed;
   z-index: 100;
-  width: 70vw;
+  max-width: 1500px;
+  width: 80vw;
+  max-height: 800;
   height: 40vw;
   margin-top: Min(13vw, 17rem);
   right: 50%;
   transform: translate(50%, -50%);
   display: none;
   flex-direction: column;
-  background-image: url("media/images/backgroundModale.png");
+  background-image: url("media/images/bgModale.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -650,27 +750,54 @@ div.item .contenuCours {
   overflow-y: auto;
 }
 
-@media only screen and (max-width: 767px) {
+div.item .contenuCours::-webkit-scrollbar {
+  width: 12px;
+}
+
+div.item .contenuCours::-webkit-scrollbar-track {
+  margin-block: 1em;
+  margin-inline: 40px;
+  background-color: #1A1A1A;
+  border-radius: 100px;
+}
+
+div.item .contenuCours::-webkit-scrollbar-thumb {
+  margin-right: 10px;
+  background-color: #3b4f5a78;
+  border-radius: 100px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   div.item .contenuCours {
     height: 50vh;
     width: 90vw;
   }
 }
 
+@media only screen and (max-width: 767px) {
+  div.item .contenuCours {
+    margin-top: Min(17vw, 19rem);
+    height: 40vh;
+    width: 95vw;
+  }
+}
+
 div.item .contenuCours .boutonFerme {
-  margin: 120px 160px 20px 0;
-  width: 150px;
-  height: 150px;
-  left: 50%;
-  text-align: center;
+  width: 120px;
+  height: 120px;
   align-self: flex-end;
-  font-family: culottes;
-  font-size: 2.5em;
   cursor: pointer;
   z-index: 130;
   background-image: url("media/images/boutFerme.png");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media only screen and (max-width: 767px) {
+  div.item .contenuCours .boutonFerme {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 div.item .contenuCours p {
@@ -692,7 +819,7 @@ div.item .contenuCours .video {
   z-index: 120;
   width: 80%;
   height: auto;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .boutonPlay {
@@ -715,7 +842,7 @@ div.item .contenuCours .video {
 }
 
 div.item h2 {
-  z-index: 2;
+  z-index: 120;
   position: relative;
   bottom: 4vw;
   left: 0;
@@ -936,8 +1063,8 @@ div.item:nth-of-type(14) {
   background-color: none;
   width: 160px;
   height: 160px;
-  bottom: 50px;
-  left: 50px;
+  bottom: 5vh;
+  left: 1vw;
   text-align: center;
   font-size: 2em;
   cursor: pointer;
@@ -966,36 +1093,23 @@ div.item:nth-of-type(14) {
   display: flex;
 }
 
-@media only screen and (max-width: 767px) {
-  #contenant__bulles {
-    position: fixed;
-    display: none;
-    flex-direction: column;
-    width: 20%;
-    height: 100vh;
-    top: 30px;
-    justify-content: space-around;
-  }
-}
-
 .footer__bulle {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 35%;
+  height: 35%;
   border-radius: 25px;
-  background-color: #1A1B1D;
+  background-color: black;
   border: 2px white solid;
   color: white;
   text-align: center;
   display: none;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 @media only screen and (max-width: 767px) {
   .footer__bulle {
-    width: 40px;
-    height: 40px;
-    position: initial;
+    width: 50%;
+    height: 50%;
   }
 }
 
@@ -1006,31 +1120,6 @@ div.item:nth-of-type(14) {
   stroke-width: .3px;
   scale: 40%;
   justify-content: center;
-}
-
-.footer__bulle:nth-child(1) {
-  bottom: 265px;
-  left: 35px;
-}
-
-.footer__bulle:nth-child(2) {
-  bottom: 240px;
-  left: 120px;
-}
-
-.footer__bulle:nth-child(3) {
-  bottom: 190px;
-  left: 190px;
-}
-
-.footer__bulle:nth-child(4) {
-  bottom: 120px;
-  left: 240px;
-}
-
-.footer__bulle:nth-child(5) {
-  bottom: 35px;
-  left: 265px;
 }
 
 .grid-container {

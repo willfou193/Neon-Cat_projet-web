@@ -120,37 +120,60 @@
   div.item .contenuCours{
     position: fixed;
     z-index: 100;
-    width: 70vw;
+    max-width: 1500px;
+    width: 80vw;
+    max-height: 800;
     height: 40vw;
     margin-top:Min(13vw,17rem);
     right: 50%;
     transform: translate(50%, -50%);
     display: none;
     flex-direction: column;
-    background-image: url('media/images/backgroundModale.png');
+    background-image: url('media/images/bgModale.png');
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     background-size: 100% 100%;
     overflow-y:auto;
-    @include screen('mobile')  {
+    
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      margin-block: 1em;
+      margin-inline: 40px;
+      background-color: $couleur__background-body;
+      border-radius: 100px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      margin-right: 10px;
+      background-color: $couleur__bouton;
+      border-radius: 100px;
+    }
+    @include screen('tablet')  {
       height: 50vh;
       width: 90vw;
     }
+    @include screen('mobile')  {
+      margin-top:Min(17vw,19rem);
+      height: 40vh;
+      width: 95vw;
+    }
     & .boutonFerme{
-      margin: 120px 160px 20px 0;
-      width: 150px;
-      height: 150px;
-      left: 50%;
-      text-align: center;
+      width: 120px;
+      height: 120px;
       align-self: flex-end;
-      font-family: culottes;
-      font-size: 2.5em;
       cursor: pointer;
       z-index: 130;
       background-image: url('media/images/boutFerme.png');
       background-repeat: no-repeat;
       background-size:contain;
+      @include screen('mobile')  {
+        width: 90px;
+        height: 90px;
+      }
     }
     & p{
       position: initial;
@@ -170,7 +193,7 @@
       z-index: 120;
       width: 80%;
       height: auto;
-      opacity: 0.7;
+      opacity: 1;
     }
   }
   .boutonPlay{
@@ -192,7 +215,7 @@
     
   }
   div.item h2{ // Titre prof ou du cours / famille de cours
-    z-index: 2;
+    z-index: 120;
     position: relative;
     bottom: 4vw;
     left: 0; 
