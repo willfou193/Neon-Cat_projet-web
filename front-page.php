@@ -42,13 +42,7 @@
 			?>
 		</div>
 	</div>
-		<div class="logo cacherDesk">
-			<?php
-				if ( function_exists( 'the_custom_logo' ) ) {
-					the_custom_logo();
-				}
-			?>
-		</div>
+		
 		<div class="menu-burgerHome cacherMobile">
             <?php 
                 wp_nav_menu(
@@ -63,15 +57,16 @@
         
     <section class="accueil">
 		<div class="menuSide">
-			<div class="menuCours">
+		<div class="menuCours">
 				<h3 class="cacherDesk">Les cours</h2>
-				<?php 
-                wp_nav_menu(
-                    array(
-                        "menu_cours" => "menu_cours"
-                    )
-            	);
-            	?>
+				<ul>
+					<li><a href="https://timm177.sg-host.com/category/jeu/">JEUX</a></li>
+					<li><a href="https://timm177.sg-host.com/category/design/">DESIGN</a></li>
+					<li><a href="https://timm177.sg-host.com/category/video/">VIDEO</a></li>
+					<li><a href="https://timm177.sg-host.com/category/web/">Web</a></li>
+					<li><a href="https://timm177.sg-host.com/category/3d/">3D</a></li>
+				</ul>
+        
 			</div>
 
 			<div class="cheminement cacherMobile" link="https://www.cmaisonneuve.qc.ca/" >

@@ -4,7 +4,7 @@
     margin: 0;
     margin-top:Min(25vw,30rem);
     @include screen('mobile')  {
-      margin-top:Min(50vw,60rem);
+      margin-top:Min(66vw,60rem);
     }
     @include screen('tablet')  {
       margin-top:Min(25vw,30rem);
@@ -44,7 +44,7 @@
     background-size: cover;
     @include screen('mobile')  {
       transform: translateX(calc(-100vw * var(--r)))scale(0.6); //300px de base
-      width: 80%;
+      width: 75%;
       padding-bottom: Min(80%, 700px);
     }
     @include screen('grandEcran')  {
@@ -65,13 +65,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     transform: rotate(180deg);
-    @include screen('mobile')  {
-      width: 80px;
-      height: 80px;
+    &:hover{
+      background-image: url('media/images/FlecheDouble.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotate(180deg);
     }
-    @include screen('tablet')  {
+    @include screen('mobile')  {
       width: 60px;
       height: 60px;
+    }
+    @include screen('tablet')  {
+      width: 80px;
+      height: 80px;
     }
   }
   #bouton__gauche{
@@ -85,23 +91,46 @@
     background-image: url('media/images/Fleche.png');
     background-repeat: no-repeat;
     background-size: cover;
-    @include screen('mobile')  {
-      width: 80px;
-      height: 80px;
+    &:hover{
+      background-image: url('media/images/FlecheDouble.png');
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-    @include screen('tablet')  {
+    @include screen('mobile')  {
       width: 60px;
       height: 60px;
     }
+    @include screen('tablet')  {
+      width: 80px;
+      height: 80px;
+    }
   }
   .nomFam{
-    font-family: neon;
+    font-family: kosan;
+    opacity: 1;
+    text-shadow: rgba(22, 22, 22, 0.986) 0px 0px 2px, rgb(8, 8, 8) 0px 0px 2px,#a9d5b2 0px 0px 10px, #a9d5bd 0px 0px 10px;
+    font-size: 2.8vw;
+    color: rgb(164, 194, 157);
+    @include screen('mobile')  {
+      font-size: 2.5vw;
+    }
+    @include screen('grandEcran')  {
+      font-size: 2.1vw;
+  }
   }
   .permalink{
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 20;
+    &:hover{
+        background-image: url('media/images/fondHover.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 1;
+        box-shadow: 0px 0px 30px 4px rgb(133, 158, 127);
+        border-radius: 10%;
+    }
   }
   div.item .img_contenent{// post thumbnail
     position: absolute;
@@ -153,40 +182,57 @@
       border-radius: 100px;
     }
     @include screen('tablet')  {
-      height: 50vh;
+      margin-top:Min(14vw,19rem);
+      height: 45vh;
       width: 90vw;
     }
     @include screen('mobile')  {
-      margin-top:Min(17vw,19rem);
-      height: 40vh;
-      width: 95vw;
+      margin-top:Min(31vw,19rem);
+      height: 100%;
+      width: 120vw;
     }
     & .boutonFerme{
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
       align-self: flex-end;
       cursor: pointer;
       z-index: 130;
       background-image: url('media/images/boutFerme.png');
       background-repeat: no-repeat;
       background-size:contain;
+      @include screen('tablet')  {
+        width: 85px;
+        height: 85px;
+      }
       @include screen('mobile')  {
-        width: 90px;
-        height: 90px;
+        margin-right: 10%;
+        width: 70px;
+        height: 70px;
       }
     }
     & p{
-      position: initial;
+      position:inherit;
       align-self: center;
-      font-size: 1.5em ;
+      font-size: 1.5rem ;
       font-family: culottes;
       padding: 50px 0;
       letter-spacing: 0.5;
       line-height: 45px;
       width: 70%;
+      margin-top: 100px;
+      @include screen('tablet')  {
+        margin-top: 70px;
+      }
+      @include screen('mobile')  {
+        margin-top: 70px;
+        font-size: 1.5em   ;
+      }
+      
     }
     & .video{//video dans la boite modale
       position: absolute;
+      margin:10px 0;
       right: 50%;
       transform: translate(50%, -50%);
       top: 50%;
@@ -209,49 +255,63 @@
     background-image: url("media/icon/boutPlay.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @include screen('tablet')  {
+      width: 70px;
+      padding-bottom: 70px;
+      border-radius: 35px;
+    }
+    @include screen('mobile')  {
+      width: 80px;
+      padding-bottom: 80px;
+      border-radius: 40px;
+    }
     &:hover{
-      background-color: $couleur__bouton;
+      background-color: #3b4f5a78;
+      box-shadow: 0px 0px 30px 4px rgb(133, 158, 127);
     }
     
   }
   div.item h2{ // Titre prof ou du cours / famille de cours
-    z-index: 120;
+    z-index: 2;
     position: relative;
-    bottom: 4vw;
-    left: 0; 
+    bottom: 6vw;
+    left: 0;
     right: 0;
     margin: 0;
     text-align: center;
-    color: $couleur__font-titre;
-    font-family:kosan ;
+    color: #A9D5CD;
+    font-family: kosan;
+    letter-spacing: 0.2rem;
     @include screen('mobile')  {
       font-size: 5vw;
+    }
+    @include screen('grandEcran')  {
+      bottom: 4vw;
     }
   }
   
   div.item { // Les cours de ... / spécialiste du ...
       & .sousTitre{
-        position:absolute;
-        left: 0; 
-        right: 0; 
+        position: absolute;
+        left: 0;
+        right: 0;
         bottom: 8%;
-        margin-left: auto; 
-        margin-right: auto; 
+        margin-left: auto;
+        margin-right: auto;
         margin: 0;
         text-align: center;
-        font-size: 2vw;
+        font-size: 1.5vw;
         font-family: kosan;
         z-index: 12;
-        color: white;
-        //background-image: url("media/images/fondMenu.png");
+        color:#A9D5CD;
         background-image: url("media/images/sousTitre.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         padding-top: 10px;
         padding-bottom: 10px;
         background-color: #252B29;
-        opacity: 0.7;
-        text-shadow: rgba(255, 255, 255, 0.541) 0px 0px 2px, rgba(255, 255, 255, 0.596) 0px 0px 2px, black 0px 0px 5px, black 0px 0px 15px;
+        opacity: 1;
+        text-shadow: rgba(22, 22, 22, 0.986) 0px 0px 2px, rgb(8, 8, 8) 0px 0px 2px,#A9D5CD 0px 0px 10px, #A9D5CD 0px 0px 10px;
         @include screen('mobile')  {
           font-size: 6vw;
         }
@@ -269,8 +329,10 @@ div.item p:nth-of-type(2){ // description
   text-align: center;
   font-family: $police__titre-secondaire;
   font-size: Max(1.1vw, 1em);
-  
   color: #ADC9B3;
+  @include screen('grandEcran')  {
+    font-size: 1.4em;
+}
 }
   div.item figure{ //image deuxieme plan
     position:absolute;

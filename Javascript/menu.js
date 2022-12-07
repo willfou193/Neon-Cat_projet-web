@@ -50,14 +50,12 @@ function carrouselMinus(){
     if (window.innerWidth < 767) {
         Array.from(document.getElementsByClassName("item"), e => e.style.transform = "translateX(calc(-90vw * var(--r)))scale(0.6)");
         for(i = 0; i < index.length; i++){
-            console.log(i);
         }
         itemProf[index-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(1)";
     }
     if(window.innerWidth > 767){
         Array.from(document.getElementsByClassName("item"), e => e.style.transform = "translateX(calc(-31vw * var(--r)))scale(0.6)");
         for(i = 0; i < index.length; i++){
-            console.log(i);
             //var paragraph = itemProf[i].getElementsByTagName('p')[1].style.display = "none";
             //console.log(paragraph);
         }
@@ -82,7 +80,6 @@ function carrouselPlus(){
     indexPost += 1;
     boutonRadio[index-1].checked = true
     if (window.innerWidth < 767) {
-        console.log("plus bas");
         Array.from(document.getElementsByClassName("item"), e => e.style.transform = "translateX(calc(-90vw * var(--r)))scale(0.6)");  
         itemProf[index-1].style.transform = "translateX(calc(-90vw * var(--r)))scale(1)";
     }
@@ -106,11 +103,18 @@ window.onresize = function() {
 //==================================================================================
 //Afficher boite modale des cours
 let boiteModAllumee = true;
+var BtnAvant = document.getElementById('bouton__gauche');
+var BtnApres = document.getElementById('bouton__droit');
 var boutonFerme = document.querySelectorAll('div.boutonFerme').forEach(boutonFerme => {
     boutonFerme.addEventListener('click', event =>  {
+        console.log(BtnAvant.style.display ='initial')
+        BtnAvant.style.display ='initial';
+        BtnApres.style.display ='initial';
+        boiteModAllumee = !boiteModAllumee;
         Array.from(document.getElementsByClassName("img_contenent"), e => e.parentNode.style.display = "block"); //effacer toute les div.item
         contenantImg.nextElementSibling.style.display = "none";
-        boiteModAllumee = !boiteModAllumee;
+        
+        
     })
   })
 var contenantImg = document.querySelectorAll('div.img_contenent').forEach(contenantImg => {
@@ -120,10 +124,14 @@ var contenantImg = document.querySelectorAll('div.img_contenent').forEach(conten
             Array.from(document.getElementsByClassName("img_contenent"), e => e.parentNode.style.display = "none"); //effacer toute les div.item
             contenantImg.parentNode.style.display = "block";
             contenantImg.nextElementSibling.style.display = "flex";
+            BtnAvant.style.display ='none';
+            BtnApres.style.display ='none';
            
         }else{
             Array.from(document.getElementsByClassName("img_contenent"), e => e.parentNode.style.display = "block"); //effacer toute les div.item
             contenantImg.nextElementSibling.style.display = "none";
+            BtnAvant.style.display ='initial';
+            BtnApres.style.display ='initial';
         }
             
     })
@@ -134,10 +142,13 @@ let boiteVideoAllumee = true;
 var boutonFermeVideo = document.querySelectorAll('div.boutonFerme').forEach(boutonFermeVideo => {
     boutonFermeVideo.addEventListener('click', event =>  {
         boiteVideoAllumee = !boiteVideoAllumee;
+        BtnAvant.style.display ='initial';
+        BtnApres.style.display ='initial';
         boutonFermeVideo.parentNode.style.display = "none";
         boutonFermeVideo.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.style.display = "block";
         Array.from(document.getElementsByClassName("boutonPlay"), e => e.parentNode.style.display = "block"); //affiche toute les div.item
         boutonPlay.style.display = "block";
+        
     })
   })
 //var root = document.querySelector('div.item');
@@ -150,10 +161,15 @@ var boutonPlay = document.querySelectorAll('div.boutonPlay').forEach(boutonPlay 
             Array.from(document.getElementsByClassName("boutonPlay"), e => e.parentNode.style.display = "none"); // On cache toutes les div.item
             boutonPlay.parentNode.style.display = "block"; // on affiche seulement le div.item courant
             boutonPlay.style.display = "none"; // cache le bouton
+            BtnAvant.style.display ='none';
+            BtnApres.style.display ='none';
+            
         }else{
             boutonPlay.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.style.display = "none"; // cache la boite
             Array.from(document.getElementsByClassName("boutonPlay"), e => e.parentNode.style.display = "block"); //affiche toute les div.item
             boutonPlay.style.display = "block";
+            BtnAvant.style.display ='initial';
+        BtnApres.style.display ='initial';
            
         }
             

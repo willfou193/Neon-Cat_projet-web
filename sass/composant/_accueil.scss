@@ -18,14 +18,14 @@
         .menuCours{
             padding-top: 20%;
             @include screen('mobile')  {
-                padding-top: 20px;
+                padding-top: 100px;
             }
             & h3{
                 text-align: center;
                 color: white;
                 text-transform: uppercase;
                 font-family: culottes;
-                color:$couleur__autre1 ;
+                color: #73CD8E;
 
             }
             & ul{
@@ -37,23 +37,77 @@
                     justify-content: space-around;
                 }
                 & li{
-                   
+                    text-decoration: none;
+                    padding-right: 15px;
+                    background-repeat: no-repeat;
+                    background-size: 80% 100%;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    text-shadow: rgba(22, 22, 22, 0.986) 0px 0px 2px, rgb(8, 8, 8) 0px 0px 2px,#a9d5b2 0px 0px 10px, #a9d5bd 0px 0px 10px;
+                    color: rgb(164, 194, 157);
                    @include screen('mobile')  {
                     margin: 0 20px ;
                 }
                     & a{
-                        font-size: Max(1.5vw, 1.2em);
-                        
+                        font-size: Max(1.7vw, 1.2em);
+                        text-decoration: none;
+                        color: #000000;
+                        font-family: kosan;
+                        color: #CFCFCF;
+                        padding-left: 15px;
+                        &:hover {
+                            color: white;
+                          }
                     }
                 }
+                li:nth-of-type(1):hover{
+                    background-image: url("media/images/courJeu.png");
+                    @include screen('mobile')  {
+                        background-image: none;
+                    }
+                  }
+                  li:nth-of-type(2):hover{
+                    background-image: url("media/images/courWeb.png");
+                    @include screen('mobile')  {
+                        background-image: none;
+                    }
+                  }
+                  li:nth-of-type(3):hover{
+                    background-image: url("media/images/courDesign.png");
+                    @include screen('mobile')  {
+                        background-image: none;
+                    }
+                  }
+                  li:nth-of-type(4):hover{
+                    background-image: url("media/images/cour3D.png");
+                    @include screen('mobile')  {
+                        background-image: none;
+                    }
+                  }
+                  li:nth-of-type(5):hover{
+                    background-image: url("media/images/courVideo.png");
+                    @include screen('mobile')  {
+                        background-image: none;
+                    }
+                  }
             }
         }
         .cheminement{
-            width: 60%;
+            width: 50%;
+            height: 10%;
             margin: 20px 0;
-            border: $couleur__background-sous-titre solid 1px;
-            border-radius: 10px;
+            border: #C8C8C8 solid 1px;
+            border-radius: 8px;
             display: flex;
+            background-image: url("media/images/cheminement.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            &:hover{
+                background-image: url("media/images/cheminementHover2.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
             @include screen('mobile')  {
                 display: none;
             }
@@ -94,6 +148,7 @@
         float: right;
         width: 83%;
         margin-top: 20px;
+        border-radius:20px;
         @include screen('mobile')  {
             width: 170%;
             float:none;

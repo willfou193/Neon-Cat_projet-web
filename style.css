@@ -242,7 +242,7 @@ COMPOSANTES
 
 @media only screen and (max-width: 767px) {
   .accueil .menuSide .menuCours {
-    padding-top: 20px;
+    padding-top: 100px;
   }
 }
 
@@ -267,6 +267,17 @@ COMPOSANTES
   }
 }
 
+.accueil .menuSide .menuCours ul li {
+  text-decoration: none;
+  padding-right: 15px;
+  background-repeat: no-repeat;
+  background-size: 80% 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-shadow: rgba(22, 22, 22, 0.986) 0px 0px 2px, #080808 0px 0px 2px, #a9d5b2 0px 0px 10px, #a9d5bd 0px 0px 10px;
+  color: #a4c29d;
+}
+
 @media only screen and (max-width: 767px) {
   .accueil .menuSide .menuCours ul li {
     margin: 0 20px;
@@ -274,15 +285,85 @@ COMPOSANTES
 }
 
 .accueil .menuSide .menuCours ul li a {
-  font-size: Max(1.5vw, 1.2em);
+  font-size: Max(1.7vw, 1.2em);
+  text-decoration: none;
+  color: #000000;
+  font-family: kosan;
+  color: #CFCFCF;
+  padding-left: 15px;
+}
+
+.accueil .menuSide .menuCours ul li a:hover {
+  color: white;
+}
+
+.accueil .menuSide .menuCours ul li:nth-of-type(1):hover {
+  background-image: url("media/images/courJeu.png");
+}
+
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide .menuCours ul li:nth-of-type(1):hover {
+    background-image: none;
+  }
+}
+
+.accueil .menuSide .menuCours ul li:nth-of-type(2):hover {
+  background-image: url("media/images/courWeb.png");
+}
+
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide .menuCours ul li:nth-of-type(2):hover {
+    background-image: none;
+  }
+}
+
+.accueil .menuSide .menuCours ul li:nth-of-type(3):hover {
+  background-image: url("media/images/courDesign.png");
+}
+
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide .menuCours ul li:nth-of-type(3):hover {
+    background-image: none;
+  }
+}
+
+.accueil .menuSide .menuCours ul li:nth-of-type(4):hover {
+  background-image: url("media/images/cour3D.png");
+}
+
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide .menuCours ul li:nth-of-type(4):hover {
+    background-image: none;
+  }
+}
+
+.accueil .menuSide .menuCours ul li:nth-of-type(5):hover {
+  background-image: url("media/images/courVideo.png");
+}
+
+@media only screen and (max-width: 767px) {
+  .accueil .menuSide .menuCours ul li:nth-of-type(5):hover {
+    background-image: none;
+  }
 }
 
 .accueil .menuSide .cheminement {
-  width: 60%;
+  width: 50%;
+  height: 10%;
   margin: 20px 0;
   border: #C8C8C8 solid 1px;
-  border-radius: 10px;
+  border-radius: 8px;
   display: flex;
+  background-image: url("media/images/cheminement.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.accueil .menuSide .cheminement:hover {
+  background-image: url("media/images/cheminementHover2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 767px) {
@@ -331,6 +412,7 @@ COMPOSANTES
   float: right;
   width: 83%;
   margin-top: 20px;
+  border-radius: 20px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -588,7 +670,7 @@ label {
 
 @media only screen and (max-width: 767px) {
   .contenant {
-    margin-top: Min(50vw, 60rem);
+    margin-top: Min(66vw, 60rem);
   }
 }
 
@@ -636,7 +718,7 @@ div.item {
 @media only screen and (max-width: 767px) {
   div.item {
     transform: translateX(calc(-100vw * var(--r))) scale(0.6);
-    width: 80%;
+    width: 75%;
     padding-bottom: Min(80%, 700px);
   }
 }
@@ -662,17 +744,24 @@ div.item {
   transform: rotate(180deg);
 }
 
+#bouton__droit:hover {
+  background-image: url("media/images/FlecheDouble.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(180deg);
+}
+
 @media only screen and (max-width: 767px) {
   #bouton__droit {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   #bouton__droit {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -689,22 +778,44 @@ div.item {
   background-size: cover;
 }
 
-@media only screen and (max-width: 767px) {
-  #bouton__gauche {
-    width: 80px;
-    height: 80px;
-  }
+#bouton__gauche:hover {
+  background-image: url("media/images/FlecheDouble.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (max-width: 767px) {
   #bouton__gauche {
     width: 60px;
     height: 60px;
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #bouton__gauche {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .nomFam {
-  font-family: neon;
+  font-family: kosan;
+  opacity: 1;
+  text-shadow: rgba(22, 22, 22, 0.986) 0px 0px 2px, #080808 0px 0px 2px, #a9d5b2 0px 0px 10px, #a9d5bd 0px 0px 10px;
+  font-size: 2.8vw;
+  color: #a4c29d;
+}
+
+@media only screen and (max-width: 767px) {
+  .nomFam {
+    font-size: 2.5vw;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .nomFam {
+    font-size: 2.1vw;
+  }
 }
 
 .permalink {
@@ -712,6 +823,15 @@ div.item {
   width: 100%;
   height: 100%;
   z-index: 20;
+}
+
+.permalink:hover {
+  background-image: url("media/images/fondHover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  box-shadow: 0px 0px 30px 4px #859e7f;
+  border-radius: 10%;
 }
 
 div.item .img_contenent {
@@ -769,22 +889,24 @@ div.item .contenuCours::-webkit-scrollbar-thumb {
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   div.item .contenuCours {
-    height: 50vh;
+    margin-top: Min(14vw, 19rem);
+    height: 45vh;
     width: 90vw;
   }
 }
 
 @media only screen and (max-width: 767px) {
   div.item .contenuCours {
-    margin-top: Min(17vw, 19rem);
-    height: 40vh;
-    width: 95vw;
+    margin-top: Min(31vw, 19rem);
+    height: 100%;
+    width: 120vw;
   }
 }
 
 div.item .contenuCours .boutonFerme {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
   align-self: flex-end;
   cursor: pointer;
   z-index: 130;
@@ -793,26 +915,49 @@ div.item .contenuCours .boutonFerme {
   background-size: contain;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  div.item .contenuCours .boutonFerme {
+    width: 85px;
+    height: 85px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   div.item .contenuCours .boutonFerme {
-    width: 90px;
-    height: 90px;
+    margin-right: 10%;
+    width: 70px;
+    height: 70px;
   }
 }
 
 div.item .contenuCours p {
-  position: initial;
+  position: inherit;
   align-self: center;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-family: culottes;
   padding: 50px 0;
   letter-spacing: 0.5;
   line-height: 45px;
   width: 70%;
+  margin-top: 100px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  div.item .contenuCours p {
+    margin-top: 70px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  div.item .contenuCours p {
+    margin-top: 70px;
+    font-size: 1.5em;
+  }
 }
 
 div.item .contenuCours .video {
   position: absolute;
+  margin: 10px 0;
   right: 50%;
   transform: translate(50%, -50%);
   top: 50%;
@@ -837,25 +982,49 @@ div.item .contenuCours .video {
   background-size: cover;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .boutonPlay {
+    width: 70px;
+    padding-bottom: 70px;
+    border-radius: 35px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .boutonPlay {
+    width: 80px;
+    padding-bottom: 80px;
+    border-radius: 40px;
+  }
+}
+
 .boutonPlay:hover {
   background-color: #3b4f5a78;
+  box-shadow: 0px 0px 30px 4px #859e7f;
 }
 
 div.item h2 {
-  z-index: 120;
+  z-index: 2;
   position: relative;
-  bottom: 4vw;
+  bottom: 6vw;
   left: 0;
   right: 0;
   margin: 0;
   text-align: center;
-  color: #FFFBF6;
+  color: #A9D5CD;
   font-family: kosan;
+  letter-spacing: 0.2rem;
 }
 
 @media only screen and (max-width: 767px) {
   div.item h2 {
     font-size: 5vw;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  div.item h2 {
+    bottom: 4vw;
   }
 }
 
@@ -868,18 +1037,18 @@ div.item .sousTitre {
   margin-right: auto;
   margin: 0;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-family: kosan;
   z-index: 12;
-  color: white;
+  color: #A9D5CD;
   background-image: url("media/images/sousTitre.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #252B29;
-  opacity: 0.7;
-  text-shadow: rgba(255, 255, 255, 0.541) 0px 0px 2px, rgba(255, 255, 255, 0.596) 0px 0px 2px, black 0px 0px 5px, black 0px 0px 15px;
+  opacity: 1;
+  text-shadow: rgba(22, 22, 22, 0.986) 0px 0px 2px, #080808 0px 0px 2px, #A9D5CD 0px 0px 10px, #A9D5CD 0px 0px 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -901,6 +1070,12 @@ div.item p:nth-of-type(2) {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: Max(1.1vw, 1em);
   color: #ADC9B3;
+}
+
+@media only screen and (min-width: 1921px) {
+  div.item p:nth-of-type(2) {
+    font-size: 1.4em;
+  }
 }
 
 div.item figure {
@@ -1061,8 +1236,8 @@ div.item:nth-of-type(14) {
   background-size: 100%;
   position: fixed;
   background-color: none;
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
   bottom: 5vh;
   left: 1vw;
   text-align: center;
@@ -1104,6 +1279,11 @@ div.item:nth-of-type(14) {
   text-align: center;
   display: none;
   border: 1px solid white;
+}
+
+.footer__bulle:hover {
+  background-color: #3b4f5a78;
+  box-shadow: 0px 0px 30px 4px #859e7f;
 }
 
 @media only screen and (max-width: 767px) {
@@ -1159,11 +1339,47 @@ h1 {
   font-weight: 100;
   letter-spacing: 2px;
   color: #FFFBF6;
-  text-shadow: rgba(255, 255, 255, 0.541) 0px 0px 5px, rgba(255, 255, 255, 0.596) 0px 0px 10px, #4780C6 0px 0px 10px, #4780C6 0px 0px 15px, #4780C6 0px 0px 20px, #4780C6 0px 0px 25px, #4780C6 0px 0px 30px, #4780C6 0px 0px 35px;
+  text-shadow: rgba(22, 22, 22, 0.986) 0px 0px 2px, #080808 0px 0px 2px, #a9d5b2 0px 0px 10px, #a9d5bd 0px 0px 10px;
+  margin-top: 15px;
 }
 
 h2 {
   font-size: Max(2.5vw, 1em);
+  font-family: kosan;
+  opacity: 1;
+  text-shadow: rgba(22, 22, 22, 0.986) 0px 0px 2px, #080808 0px 0px 2px, #a9d5b2 0px 0px 10px, #a9d5bd 0px 0px 10px;
+  letter-spacing: 2px;
+  font-style: 1rem;
+  color: #a4c29d;
+  line-height: 0.7;
+}
+
+div.item h2 {
+  z-index: 2;
+  font-size: 3.1vw;
+  position: relative;
+  bottom: 6vw;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  color: #A9D5CD;
+  font-family: kosan;
+  letter-spacing: 0.2rem;
+  line-height: 0.9;
+}
+
+@media only screen and (min-width: 1921px) {
+  div.item h2 {
+    bottom: 5vw;
+    font-size: 2.8vw;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  div.item h2 {
+    line-height: 1;
+  }
 }
 
 h3 {
