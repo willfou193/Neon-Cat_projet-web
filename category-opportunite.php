@@ -18,6 +18,7 @@ get_header();
 
 
     <div class="contenu-opportunite">
+        <p>salut cest un test</p>
         <?php  the_content(); ?>
     </div>
 
