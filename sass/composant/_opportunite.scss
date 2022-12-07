@@ -23,3 +23,55 @@
     // padding-right: 5%;
     padding: 5%;
 }
+
+.img-opportunite {
+    border-radius: 8%;
+    opacity: 0.8;
+    border: white 1px solid;
+    box-shadow: 0px 0px 30px 4px rgb(3, 3, 3);
+}
+
+.contenu-opportunite .wp-block-gallery-1 figure img {
+    border-radius: 8%;
+    opacity: 0.8;
+    border: white 1px solid;
+    box-shadow: 0px 0px 30px 4px rgb(3, 3, 3);
+}
+
+.contenu-opportunite .wp-block-gallery-3 figure img {
+    border-radius: 8%;
+    opacity: 0.8;
+    border: white 1px solid;
+    box-shadow: 0px 0px 30px 4px rgb(3, 3, 3);
+}
+
+.contenu-opportunite .wp-block-gallery-5 figure img {
+    border-radius: 8%;
+    opacity: 0.8;
+    border: white 1px solid;
+    box-shadow: 0px 0px 30px 4px rgb(3, 3, 3);
+}
+
+.wp-element-caption{
+    // display: none;
+    
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+    background: none;
+}
+
+// anto ambiance
+.category-ambiance{
+    overflow-y: scroll;
+}
+
+ .wp-block-gallery-2 {
+    margin: auto;
+ }
+
+ .contenu-ambiance{
+
+    padding-top: 10%;
+    
+    }
