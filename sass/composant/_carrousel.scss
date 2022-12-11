@@ -2,7 +2,7 @@
     width: 100%;
     height: 50vh;
     margin: 0;
-    margin-top:Min(25vw,25rem);
+    margin-top:Min(25vw,20rem);
     @include screen('mobile')  {
       margin-top:Min(66vw,60rem);
     }
@@ -27,10 +27,10 @@
   
   div.item {
     position: absolute;
-    max-width: 500px;
+    max-width: 400px;
     width: 35%;
     height: 0;
-    padding-bottom: Min(33%, 500px);
+    padding-bottom: Min(33%, 400px);
     
     --r: calc(var(--position) - var(--offset)); //1 - la position des carte
     --abs: max(calc(var(--r) * -1), var(--r)); // 0 ou -1 ou -2... donc 0 1 ou 2
@@ -48,8 +48,8 @@
       padding-bottom: Min(80%, 700px);
     }
     @include screen('grandEcran')  {
-      max-width: 700px;
-      padding-bottom: Min(35%, 700px);
+      max-width: 600px;
+      padding-bottom: Min(35%, 600px);
     }
     
   }

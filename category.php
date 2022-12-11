@@ -40,9 +40,8 @@ get_header();
 							
 									$leTitre = get_the_title();
 									$longueur = strlen($leTitre);
-									$court = 20;
-									$moyen = 25;
-									$long = 30;
+									$court = 30;
+									$long = 38;
 								?>	
 
 								<div class="item">
@@ -51,11 +50,11 @@ get_header();
 										?>
 										courtTitre
 										<?php
-									}else if($longueur < $moyen && $longueur > $court){
+									}else if($longueur < $long && $longueur > $court){
 										?>
 										moyenTitre
 										<?php
-									}else if($longueur < $long && $longueur > $moyen){
+									}else if($longueur > $long){
 										?>
 										longTitre
 										<?php
