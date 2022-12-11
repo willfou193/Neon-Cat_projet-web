@@ -14,21 +14,12 @@
 
 get_header();
 ?>
+<main id="primary" class="site-main opportunite" >
 
-<main id="primary" class="site-main" >
 
-    
-
-        <div class="grid-container">
-            <div class="lesOpportunites"></div>
-                <div class="opportunite3">
-                    <img src="media/images/R.jpg" alt="uqat">
-                </div>
-                <div class="opportunite2"></div>
-                <div class="opportunite1"></div>
-        </div>
-
-               
+    <div class="contenu-opportunite">
+        <?php  the_content(); ?>
+    </div>
 
 
 </main>
@@ -36,4 +27,3 @@ get_header();
 <?php
     get_footer();
 ?>
-

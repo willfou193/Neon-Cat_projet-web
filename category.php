@@ -41,8 +41,8 @@ get_header();
 									$leTitre = get_the_title();
 									$longueur = strlen($leTitre);
 									$court = 20;
-									$moyen = 30;
-									$long = 40;
+									$moyen = 25;
+									$long = 30;
 								?>	
 
 								<div class="item">

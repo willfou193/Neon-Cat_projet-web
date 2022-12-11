@@ -77,7 +77,8 @@
 		</div>
 		<div id="videoAcc_Contenant">
 			<div id="video">
-				<video src="https://i.imgur.com/lhLAny2.mp4" class="videoAcc" autoplay="" muted="" playsinline="" loop=""></video>
+			<!--<video src="https://i.imgur.com/lhLAny2.mp4" class="videoAcc" autoplay="" muted="" playsinline="" loop=""></video>-->
+				<video src="https://i.imgur.com/AsDdN0E.mp4" class="videoAcc" autoplay="" muted="" playsinline="" loop=""></video>
 			</div>
  			
 			 
