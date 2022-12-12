@@ -155,7 +155,7 @@
     height: 40vw;
     margin-top:Min(13vw,8rem);
     right: 50%;
-    transform: translate(50%, -50%);
+    transform: translate(50%, -45%);
     display: none;
     flex-direction: column;
     background-image: url('media/images/bgModale.png');
@@ -182,6 +182,7 @@
       border-radius: 100px;
     }
     @include screen('grandEcran')  {
+      transform: translate(50%, -40%);
       margin-top:Min(31vw,12rem);
       height: 110%;
       width: 120vw;
@@ -192,7 +193,7 @@
       width: 90vw;
     }
     @include screen('mobile')  {
-      transform: translate(50%, -52%);
+      transform: translate(50%, -50%);
       margin-top:Min(31vw,19rem);
       height: 110%;
       width: 120vw;
@@ -279,7 +280,7 @@
   }
   div.item h2{ // Titre prof ou du cours / famille de cours
     &.courtTitre{
-      font-size: 2.5vw;
+      font-size: 2.3vw;
       line-height: 1.15;
       @include screen('mobile')  {
         font-size: 5vw;
@@ -287,7 +288,7 @@
       }
     }
     &.moyenTitre{
-      font-size: 2.5vw;
+      font-size: 1.9vw;
       line-height: 1.15;
       @include screen('mobile')  {
         font-size: 5vw;
@@ -295,7 +296,7 @@
       }
     }
     &.longTitre{
-      font-size: 2.5vw;
+      font-size: 1.7vw;
       line-height: 1.15;
       @include screen('mobile')  {
         font-size: 5vw;

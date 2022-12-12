@@ -117,7 +117,7 @@
             }
         }
         .cheminement{
-            width: 50%;
+            width: 60%;
             margin: 20px 0;
             border: #C8C8C8 solid 1px;
             border-radius: 8px;
@@ -130,6 +130,9 @@
                 background-image: url("media/images/cheminementHover2.png");
                 background-size: cover;
                 background-repeat: no-repeat;
+            }
+            @include screen('tablet')  {
+                width: 90%;
             }
             @include screen('mobile')  {
                 display: none;

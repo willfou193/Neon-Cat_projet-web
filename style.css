@@ -390,7 +390,7 @@ COMPOSANTES
 }
 
 .accueil .menuSide .cheminement {
-  width: 50%;
+  width: 60%;
   margin: 20px 0;
   border: #C8C8C8 solid 1px;
   border-radius: 8px;
@@ -405,6 +405,12 @@ COMPOSANTES
   background-image: url("media/images/cheminementHover2.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .accueil .menuSide .cheminement {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -635,6 +641,8 @@ label {
 }
 
 .menu-burger #burger__fondActif .menu-menu-1-container ul {
+  display: flex;
+  flex-direction: column;
   padding: 0px;
   margin: 0px;
 }
@@ -648,15 +656,30 @@ label {
 }
 
 .menu-burger #burger__fondActif .menu-menu-1-container ul li {
+  width: 100%;
   z-index: 13;
   text-align: center;
   padding: 10px 0;
-  margin: 10px 0;
+  margin: 10px auto 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .menu-burger #burger__fondActif .menu-menu-1-container ul li {
+    width: 100%;
+  }
 }
 
 .menu-burger #burger__fondActif .menu-menu-1-container ul li a {
+  width: 100%;
   font-variant: small-caps;
   color: #000000;
+}
+
+@media only screen and (max-width: 767px) {
+  .menu-burger #burger__fondActif .menu-menu-1-container ul li a {
+    font-size: 1.6em;
+    padding: 0 20% 0 20%;
+  }
 }
 
 .cacherDesk {
@@ -933,7 +956,7 @@ div.item .contenuCours {
   height: 40vw;
   margin-top: Min(13vw, 8rem);
   right: 50%;
-  transform: translate(50%, -50%);
+  transform: translate(50%, -45%);
   display: none;
   flex-direction: column;
   background-image: url("media/images/bgModale.png");
@@ -964,6 +987,7 @@ div.item .contenuCours::-webkit-scrollbar-thumb {
 
 @media only screen and (min-width: 1921px) {
   div.item .contenuCours {
+    transform: translate(50%, -40%);
     margin-top: Min(31vw, 12rem);
     height: 110%;
     width: 120vw;
@@ -980,7 +1004,7 @@ div.item .contenuCours::-webkit-scrollbar-thumb {
 
 @media only screen and (max-width: 767px) {
   div.item .contenuCours {
-    transform: translate(50%, -52%);
+    transform: translate(50%, -50%);
     margin-top: Min(31vw, 19rem);
     height: 110%;
     width: 120vw;
@@ -1101,7 +1125,7 @@ div.item h2 {
 }
 
 div.item h2.courtTitre {
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   line-height: 1.15;
 }
 
@@ -1113,7 +1137,7 @@ div.item h2.courtTitre {
 }
 
 div.item h2.moyenTitre {
-  font-size: 2.5vw;
+  font-size: 1.9vw;
   line-height: 1.15;
 }
 
@@ -1125,7 +1149,7 @@ div.item h2.moyenTitre {
 }
 
 div.item h2.longTitre {
-  font-size: 2.5vw;
+  font-size: 1.7vw;
   line-height: 1.15;
 }
 

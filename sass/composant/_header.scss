@@ -89,6 +89,8 @@ label{
             left: 50%;
             transform: translate(-50%, -50%);
              & ul {
+                    display: flex;
+                    flex-direction: column;
                     padding: 0px;
                     margin: 0px;
                     & :hover{
@@ -99,14 +101,24 @@ label{
                         background-size: 100%;
                     }
                     & li{
+                        width: 100%;
                         z-index: 13;
                         text-align: center;
                         padding: 10px 0;
-                        margin: 10px 0;
+                        margin: 10px auto 0 auto;
+                        @include screen('mobile')  {
+                            width: 100%;
+                        }
                             & a{
+                                width: 100%;
                                 font-variant: small-caps;
                                 color:$couleur__background-menu;
+                                @include screen('mobile')  {
+                                    font-size:1.6em;
+                                    padding: 0 20% 0 20%;
+                                }
                             }
+
                     }
                 }
            
