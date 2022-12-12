@@ -11,37 +11,13 @@
  *
  * @package _underscore
  */
-
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
-		<?php
-		if ( have_posts() ) : 	the_post();?>
-			
-			
-
-
-
-
-
-
-
-
-
-
-        <?php
-        endif;?>
-                    </div>
-                    
-                   
-                    
-                </div>
-			
-			
-
-	</main><!-- #main -->
-
+<main id="primary" class="site-main ambiance" >
+    <div class="contenu-ambiance">
+        <?php  the_content(); ?>
+    </div>
+</main>
 <?php
-//get_sidebar();
-get_footer();
+    get_footer();
+?>

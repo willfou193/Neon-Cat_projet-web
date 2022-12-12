@@ -1,4 +1,6 @@
 header{
+    //ajout récent global
+    margin-top: 10px;
     display: flex;
     & div{
         width: 33.33%;
@@ -33,7 +35,7 @@ header{
                     font-family: culottes;
                     color: $couleur__font-titre;
                     &:hover{
-                        color:$couleur__autre1 ;
+                        color:rgb(133, 158, 127);
                     }
                 }
             }
@@ -127,6 +129,7 @@ label{
 
 }
 .burger__ligne{
+    border-radius: 2px;
     transform:rotate(0deg); ;
     transition: 0.75s;
 }

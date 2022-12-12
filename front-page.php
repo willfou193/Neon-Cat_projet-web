@@ -58,7 +58,7 @@
     <section class="accueil">
 		<div class="menuSide">
 		<div class="menuCours">
-				<h3 class="cacherDesk">Les cours</h2>
+				<h3 class="cacherDesk">Cours</h2>
 				<ul>
 					<li><a href="https://timm177.sg-host.com/category/jeu/">JEUX</a></li>
 					<li><a href="https://timm177.sg-host.com/category/design/">DESIGN</a></li>

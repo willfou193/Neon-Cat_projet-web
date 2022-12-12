@@ -27,7 +27,7 @@ div.item h2{
     z-index: 2;
     font-size: 3.1vw;
     position: relative;
-    bottom: 6vw;
+    bottom: 6.2vw;
     left: 0;
     right: 0;
     margin: 0;
@@ -37,11 +37,13 @@ div.item h2{
     letter-spacing: 0.2rem;
     line-height: 0.9;
     @include screen('grandEcran')  {
-        bottom: 5vw;
+        bottom: 5.2vw;
         font-size: 2.8vw;
     }
     @include screen('mobile')  {
-        line-height: 1;
+        line-height: 0.7;
+        font-size: 9vw;
+        bottom: 15vw;
     }
 }
 h3{
@@ -62,6 +64,9 @@ a{
     color: $couleur__background-menu;
     font-family: kosan ;
     color: $couleur__font-sous-titre;
+    &:hover{
+        color:rgb(133, 158, 127);
+    }
 }
 
 li{
